@@ -744,23 +744,23 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "What are two responsibilities that you will have as a British citizen or permanent resident of the UK?",
-  "question_zh": null,
+  "question_zh": "作为英国公民或联合王国（UK）的永久居民，您将承担哪两项责任？",
   "options": [
    {
     "en": "To look after the area in which you live and the environment",
-    "zh": null
+    "zh": "照看您居住的地区和环境"
    },
    {
     "en": "To look after yourself and your family",
-    "zh": null
+    "zh": "照看您自己和您的家人"
    },
    {
     "en": "To stay in the UK forever",
-    "zh": null
+    "zh": "永远留在联合王国（UK）"
    },
    {
     "en": "To promote work in your local community",
-    "zh": null
+    "zh": "促进您当地社区的工作"
    }
   ],
   "answer": [
@@ -768,8 +768,10 @@
    1
   ],
   "explanation_en": "If you wish to be a permanent resident or citizen of the UK, you should: look after yourself and your family, look after the area in which you live and the environment , respect and obey the law, respect the rights of others, including their right to their own opinions and treat others with fairness.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "如果您希望成为联合王国（UK）的永久居民或公民，您应当：照看您自己和家人，照看您居住的地区和环境，尊重并遵守法律，尊重他人的权利（包括发表个人意见的权利），并公平对待他人。",
+  "linked_content": [
+   "ch1-s03-p007"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-02",
@@ -777,31 +779,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Where is Big Ben located?",
-  "question_zh": null,
+  "question_zh": "大本钟（Big Ben）位于何处？",
   "options": [
    {
     "en": "Buckingham Palace",
-    "zh": null
+    "zh": "白金汉宫"
    },
    {
     "en": "The Tower of London",
-    "zh": null
+    "zh": "伦敦塔"
    },
    {
     "en": "Trafalgar Square",
-    "zh": null
+    "zh": "特拉法加广场"
    },
    {
     "en": "The Houses of the Parliament",
-    "zh": null
+    "zh": "议会大厦"
    }
   ],
   "answer": [
    3
   ],
   "explanation_en": "Big Ben is the nickname for the great bell of the clock at the Houses of Parliament in London .",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "大本钟（Big Ben）是伦敦议会大厦（Houses of Parliament）时钟上大钟的昵称。",
+  "linked_content": [
+   "ch4-s05-p004"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-03",
@@ -809,31 +813,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "When were men and women given the right to vote at the age of 21?",
-  "question_zh": null,
+  "question_zh": "男女何时被赋予了21岁投票的权利？",
   "options": [
    {
     "en": "1918",
-    "zh": null
+    "zh": "1918年"
    },
    {
     "en": "1903",
-    "zh": null
+    "zh": "1903年"
    },
    {
     "en": "1928",
-    "zh": null
+    "zh": "1928年"
    },
    {
     "en": "1923",
-    "zh": null
+    "zh": "1923年"
    }
   ],
   "answer": [
    2
   ],
   "explanation_en": "In 1928 , women were given the right to vote at the age of 21, the same as men.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "1928年，女性获得了21岁投票的权利，与男性相同。",
+  "linked_content": [
+   "ch6-s02-p002"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-04",
@@ -841,31 +847,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Where is the UK geographically located?",
-  "question_zh": null,
+  "question_zh": "联合王国（UK）在地理上位于哪里？",
   "options": [
    {
     "en": "South west of Europe",
-    "zh": null
+    "zh": "欧洲西南部"
    },
    {
     "en": "North east of Europe",
-    "zh": null
+    "zh": "欧洲东北部"
    },
    {
     "en": "North west of Europe",
-    "zh": null
+    "zh": "欧洲西北部"
    },
    {
     "en": "South east of Europe",
-    "zh": null
+    "zh": "欧洲东南部"
    }
   ],
   "answer": [
    2
   ],
   "explanation_en": "The UK is located in the north west of Europe .",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "联合王国（UK）位于欧洲西北部。",
+  "linked_content": [
+   "ch4-s08-p002"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-05",
@@ -873,31 +881,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Who is the patron Saint of Scotland?",
-  "question_zh": null,
+  "question_zh": "谁是苏格兰的主保圣人？",
   "options": [
    {
     "en": "St David",
-    "zh": null
+    "zh": "圣大卫（St David）"
    },
    {
     "en": "St Patrick",
-    "zh": null
+    "zh": "圣帕特里克（St Patrick）"
    },
    {
     "en": "St George",
-    "zh": null
+    "zh": "圣乔治（St George）"
    },
    {
     "en": "St Andrew",
-    "zh": null
+    "zh": "圣安德鲁（St Andrew）"
    }
   ],
   "answer": [
    3
   ],
   "explanation_en": "The patron Saint of Scotland is St Andrew .",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "苏格兰的主保圣人是圣安德鲁（St Andrew）。",
+  "linked_content": [
+   "ch4-s06-p007"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-06",
@@ -905,23 +915,23 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Which two houses fought in the Wars of the Roses?",
-  "question_zh": null,
+  "question_zh": "玫瑰战争（Wars of the Roses）是哪两个家族（House）之间的战争？",
   "options": [
    {
     "en": "The House of Chester",
-    "zh": null
+    "zh": "切斯特家族（The House of Chester）"
    },
    {
     "en": "The House of York",
-    "zh": null
+    "zh": "约克家族（The House of York）"
    },
    {
     "en": "The House of Lancaster",
-    "zh": null
+    "zh": "兰开斯特家族（The House of Lancaster）"
    },
    {
     "en": "The House of Newcastle",
-    "zh": null
+    "zh": "纽卡斯尔家族（The House of Newcastle）"
    }
   ],
   "answer": [
@@ -929,8 +939,10 @@
    2
   ],
   "explanation_en": "The Wars of the Roses were fought between the supporters of two families: the House of Lancaster and the House of York .",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "玫瑰战争（Wars of the Roses）是在两个家族的支持者之间进行的：兰开斯特家族（House of Lancaster）和约克家族（House of York）。",
+  "linked_content": [
+   "ch6-s02-p006"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-07",
@@ -938,23 +950,25 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "The Bill of Rights of 1689 confirmed the right to vote for all adult men.",
-  "question_zh": null,
+  "question_zh": "1689年的《权利法案》（Bill of Rights）确认了所有成年男性的投票权。",
   "options": [
    {
     "en": "True",
-    "zh": null
+    "zh": "正确"
    },
    {
     "en": "False",
-    "zh": null
+    "zh": "错误"
    }
   ],
   "answer": [
    1
   ],
   "explanation_en": "False . The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king’s power.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "错误。1689年的《权利法案》（Bill of Rights）确认了议会（Parliament）的权利并限制了君主的权力。",
+  "linked_content": [
+   "ch6-s02-p002"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-08",
@@ -962,31 +976,34 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "What is the Cenotaph?",
-  "question_zh": null,
+  "question_zh": "和平纪念碑（Cenotaph）是什么？",
   "options": [
    {
     "en": "A flower",
-    "zh": null
+    "zh": "一种花"
    },
    {
     "en": "A Christian church",
-    "zh": null
+    "zh": "一座基督教堂"
    },
    {
     "en": "A war memorial",
-    "zh": null
+    "zh": "一座战争纪念碑"
    },
    {
     "en": "A theatre",
-    "zh": null
+    "zh": "一家剧院"
    }
   ],
   "answer": [
    2
   ],
   "explanation_en": "The Cenotaph is a war memorial and it is the site of the annual Remembrance Day service attended by the King, politicians and foreign ambassadors.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "和平纪念碑（Cenotaph）是一座战争纪念碑，它是国王、政治家和外国大使参加的一年一度阵亡将士纪念日（Remembrance Day）仪式的举办地。",
+  "linked_content": [
+   "ch4-s02-p038",
+   "ch4-s03-p019"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-09",
@@ -994,31 +1011,34 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Who was the first female Prime Minister of the UK?",
-  "question_zh": null,
+  "question_zh": "谁是联合王国（UK）的第一位女首相？",
   "options": [
    {
     "en": "Mary Stuart",
-    "zh": null
+    "zh": "玛丽·斯图亚特（Mary Stuart）"
    },
    {
     "en": "Theresa May",
-    "zh": null
+    "zh": "特蕾莎·梅（Theresa May）"
    },
    {
     "en": "Margaret Thatcher",
-    "zh": null
+    "zh": "玛格丽特·撒切尔（Margaret Thatcher）"
    },
    {
     "en": "Florence Nightingale",
-    "zh": null
+    "zh": "弗洛伦斯·南丁格尔（Florence Nightingale）"
    }
   ],
   "answer": [
    2
   ],
   "explanation_en": "Margaret Thatcher was the first woman Prime Minister of the UK.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "玛格丽特·撒切尔（Margaret Thatcher）是联合王国（UK）的第一位女首相。",
+  "linked_content": [
+   "ch3-s02-p038",
+   "ch6-s02-p008"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-10",
@@ -1026,31 +1046,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Who chairs the debates at the House of Commons?",
-  "question_zh": null,
+  "question_zh": "谁主持下议院（House of Commons）的辩论？",
   "options": [
    {
     "en": "A bishop",
-    "zh": null
+    "zh": "一位主教"
    },
    {
     "en": "The Prime Minister",
-    "zh": null
+    "zh": "首相"
    },
    {
     "en": "The Speaker",
-    "zh": null
+    "zh": "议长（Speaker）"
    },
    {
     "en": "The archbishop of Canterbury",
-    "zh": null
+    "zh": "坎特伯雷大主教"
    }
   ],
   "answer": [
    2
   ],
   "explanation_en": "Debates in the House of Commons are chaired by the Speaker .",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "下议院（House of Commons）的辩论由议长（Speaker）主持。",
+  "linked_content": [
+   "ch5-s03-p031"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-11",
@@ -1058,31 +1080,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Who was the captain of the English football team that won the World Cup in 1966?",
-  "question_zh": null,
+  "question_zh": "1966年赢得世界杯的英格兰足球队队长是谁？",
   "options": [
    {
     "en": "Sir Roger Bannister",
-    "zh": null
+    "zh": "罗杰·班尼斯特爵士（Sir Roger Bannister）"
    },
    {
     "en": "Sir Jackie Stewart",
-    "zh": null
+    "zh": "杰基·斯图尔特爵士（Sir Jackie Stewart）"
    },
    {
     "en": "Sir Ian Botham",
-    "zh": null
+    "zh": "伊恩·博瑟姆爵士（Sir Ian Botham）"
    },
    {
     "en": "Bobby Moore",
-    "zh": null
+    "zh": "博比·摩尔（Bobby Moore）"
    }
   ],
   "answer": [
    3
   ],
   "explanation_en": "Bobby Moore captained the English football team that won the World Cup in 1966.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "博比·摩尔（Bobby Moore）在1966年担任了赢得世界杯的英格兰足球队队长。",
+  "linked_content": [
+   "ch4-s07-p007"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-12",
@@ -1090,31 +1114,34 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "When did the English defeat the Spanish Armada?",
-  "question_zh": null,
+  "question_zh": "英格兰人何时击败了西班牙无敌舰队？",
   "options": [
    {
     "en": "1466",
-    "zh": null
+    "zh": "1466年"
    },
    {
     "en": "1066",
-    "zh": null
+    "zh": "1066年"
    },
    {
     "en": "1254",
-    "zh": null
+    "zh": "1254年"
    },
    {
     "en": "1588",
-    "zh": null
+    "zh": "1588年"
    }
   ],
   "answer": [
    3
   ],
   "explanation_en": "In 1588 the English defeated the Spanish Armada.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "1588年，英格兰人击败了西班牙无敌舰队。",
+  "linked_content": [
+   "ch3-s06-p014",
+   "ch6-s02-p006"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-13",
@@ -1122,23 +1149,25 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Anyone can make a complaint about the police by writing to the Chief Constable of the police force involved.",
-  "question_zh": null,
+  "question_zh": "任何人都可以通过写信给相关警力的总警司（Chief Constable）来对警察提出投诉。",
   "options": [
    {
     "en": "True",
-    "zh": null
+    "zh": "正确"
    },
    {
     "en": "False",
-    "zh": null
+    "zh": "错误"
    }
   ],
   "answer": [
    0
   ],
   "explanation_en": "This statement is TRUE .",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "此说法正确。",
+  "linked_content": [
+   "ch5-s05-p018"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-14",
@@ -1146,31 +1175,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "What is the minimum age required to serve on a jury?",
-  "question_zh": null,
+  "question_zh": "担任陪审团成员所需的最低年龄是多少？",
   "options": [
    {
     "en": "16",
-    "zh": null
+    "zh": "16岁"
    },
    {
     "en": "18",
-    "zh": null
+    "zh": "18岁"
    },
    {
     "en": "21",
-    "zh": null
+    "zh": "21岁"
    },
    {
     "en": "25",
-    "zh": null
+    "zh": "25岁"
    }
   ],
   "answer": [
    1
   ],
   "explanation_en": "Anyone who is on the electoral register and is aged 18 to 70 can be asked to serve on a jury.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "任何在选民登记册（electoral register）上且年龄在18至70岁之间的人都可能被要求履行陪审团义务（serve on a jury）。",
+  "linked_content": [
+   "ch5-s08-p009"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-15",
@@ -1178,31 +1209,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "How is a jury selected?",
-  "question_zh": null,
+  "question_zh": "陪审团是如何选出的？",
   "options": [
    {
     "en": "From the NHS registration system",
-    "zh": null
+    "zh": "从NHS注册系统中"
    },
    {
     "en": "Randomly from the electoral register",
-    "zh": null
+    "zh": "从选民登记册中随机选择"
    },
    {
     "en": "Alphabetically from the telephone directory",
-    "zh": null
+    "zh": "从电话簿中按字母顺序选择"
    },
    {
     "en": "From a postcode selection",
-    "zh": null
+    "zh": "从邮政编码选择中"
    }
   ],
   "answer": [
    1
   ],
   "explanation_en": "As well as getting the right to vote, people on the electoral register are randomly selected to serve on a jury. Anyone who is on the electoral register and is aged 18 to 70 can be asked to do this.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "除了获得投票权外，选民登记册（electoral register）上的人还会被随机选中履行陪审团义务。任何在选民登记册上且年龄在18至70岁之间的人都可能被要求履行陪审团义务。",
+  "linked_content": [
+   "ch5-s08-p009"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-16",
@@ -1210,31 +1243,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "What is a bank holiday?",
-  "question_zh": null,
+  "question_zh": "法定假日（bank holiday）是什么？",
   "options": [
    {
     "en": "A public holiday when banks are open all day",
-    "zh": null
+    "zh": "银行整天营业的公共假日"
    },
    {
     "en": "A public holiday for people working in banks",
-    "zh": null
+    "zh": "为银行工作人员设立的公共假日"
    },
    {
     "en": "An additional day off that every worker in the UK is entitled to",
-    "zh": null
+    "zh": "联合王国（UK）每位工人都有权享受的额外一天假"
    },
    {
     "en": "A public holiday when banks and many other businesses are closed for the day",
-    "zh": null
+    "zh": "银行和许多其他企业在当天关闭的公共假日"
    }
   ],
   "answer": [
    3
   ],
   "explanation_en": "There are public holidays each year called bank holidays, when banks and many other businesses are closed for the day .",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "每年都有称为法定假日（bank holidays）的公共假日，届时银行和许多其他企业都会放假一天。",
+  "linked_content": [
+   "ch4-s03-p020"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-17",
@@ -1242,31 +1277,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "What will you be given to vote before a general election takes place?",
-  "question_zh": null,
+  "question_zh": "在大选（general election）举行前，您会收到什么用于投票？",
   "options": [
    {
     "en": "A ballot slip",
-    "zh": null
+    "zh": "一张选票纸（ballot slip）"
    },
    {
     "en": "A poll card",
-    "zh": null
+    "zh": "一张选民卡（poll card）"
    },
    {
     "en": "A voting slip",
-    "zh": null
+    "zh": "一张投票条"
    },
    {
     "en": "A poll tax relief",
-    "zh": null
+    "zh": "人头税减免"
    }
   ],
   "answer": [
    1
   ],
   "explanation_en": "Before the election you will be sent a poll card .",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "选举前您将收到一张选民卡（poll card）。",
+  "linked_content": [
+   "ch5-s06-p042"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-18",
@@ -1274,23 +1311,25 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Which of the following statements is correct?",
-  "question_zh": null,
+  "question_zh": "下列哪项陈述是正确的？",
   "options": [
    {
     "en": "Solicitors’ charges are usually based on how much time they spend on a case",
-    "zh": null
+    "zh": "事务律师（Solicitor）的收费通常基于他们花在案件上的时间"
    },
    {
     "en": "Solicitors’ charges are usually based on the nature of a case and its importance",
-    "zh": null
+    "zh": "事务律师（Solicitor）的收费通常基于案件的性质及其重要性"
    }
   ],
   "answer": [
    0
   ],
   "explanation_en": "Solicitors’ charges are usually based on how much time they spend of a case.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "事务律师（Solicitor）的收费通常取决于他们在案件上花费的时间。",
+  "linked_content": [
+   "ch5-s05-p036"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-19",
@@ -1298,23 +1337,23 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "By law, which TWO types of media have to give a balanced coverage of all political parties and equal time to rival viewpoints before an election?",
-  "question_zh": null,
+  "question_zh": "根据法律，哪两种类型的媒体在选举前必须对所有政党进行均衡报道，并为相互竞争的观点提供平等的发言时间？",
   "options": [
    {
     "en": "Television",
-    "zh": null
+    "zh": "电视"
    },
    {
     "en": "Internet",
-    "zh": null
+    "zh": "互联网"
    },
    {
     "en": "Newspapers",
-    "zh": null
+    "zh": "报纸"
    },
    {
     "en": "Radio",
-    "zh": null
+    "zh": "广播"
    }
   ],
   "answer": [
@@ -1322,8 +1361,10 @@
    3
   ],
   "explanation_en": "By law, radio and television coverage of the political parties must be balanced and so equal time has to be given to rival viewpoints.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "根据法律，广播和电视对政党的报道必须是均衡的，因此必须给相互竞争的观点平等的发言时间。",
+  "linked_content": [
+   "ch5-s06-p034"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-20",
@@ -1331,31 +1372,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Which of the following territories is a Crown dependency but is NOT part of the UK?",
-  "question_zh": null,
+  "question_zh": "以下哪个地区是王室属地（Crown dependency），但不属于联合王国（UK）？",
   "options": [
    {
     "en": "Northern Ireland",
-    "zh": null
+    "zh": "北爱尔兰"
    },
    {
     "en": "Wales",
-    "zh": null
+    "zh": "威尔士"
    },
    {
     "en": "The Channel Islands",
-    "zh": null
+    "zh": "海峡群岛（The Channel Islands）"
    },
    {
     "en": "Scotland",
-    "zh": null
+    "zh": "苏格兰"
    }
   ],
   "answer": [
    2
   ],
   "explanation_en": "The Channel Islands is a British overseas territory linked to the UK, but it is not part of it.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "海峡群岛（The Channel Islands）是与联合王国（UK）相连的王室属地，但不属于它。",
+  "linked_content": [
+   "ch2-s02-p003"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-21",
@@ -1363,31 +1406,34 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "What did Sir Frank Whittle invent in the 1930s?",
-  "question_zh": null,
+  "question_zh": "弗兰克·惠特尔爵士（Sir Frank Whittle）在1930年代发明了什么？",
   "options": [
    {
     "en": "Radar",
-    "zh": null
+    "zh": "雷达"
    },
    {
     "en": "Hovercraft",
-    "zh": null
+    "zh": "气垫船"
    },
    {
     "en": "Jet engine",
-    "zh": null
+    "zh": "喷气式发动机"
    },
    {
     "en": "Ballpoint pen",
-    "zh": null
+    "zh": "圆珠笔"
    }
   ],
   "answer": [
    2
   ],
   "explanation_en": "The jet engine was developed in Britain in the 1930s by Sir Frank Whittle .",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "喷气式发动机是1930年代由弗兰克·惠特尔爵士（Sir Frank Whittle）在英国研制的。",
+  "linked_content": [
+   "ch3-s02-p023",
+   "ch6-s02-p005"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-22",
@@ -1395,31 +1441,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Who wrote ‘The Daffodils’?",
-  "question_zh": null,
+  "question_zh": "谁写了《水仙花》（The Daffodils）？",
   "options": [
    {
     "en": "William Blake",
-    "zh": null
+    "zh": "威廉·布莱克（William Blake）"
    },
    {
     "en": "Robert Browning",
-    "zh": null
+    "zh": "罗报特·勃朗宁（Robert Browning）"
    },
    {
     "en": "Lord Byron",
-    "zh": null
+    "zh": "拜伦勋爵（Lord Byron）"
    },
    {
     "en": "William Wordsworth",
-    "zh": null
+    "zh": "威廉·华兹华斯（William Wordsworth）"
    }
   ],
   "answer": [
    3
   ],
   "explanation_en": "The British poet William Wordsworth wrote ‘The Daffodils’.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "英国诗人威廉·华兹华斯（William Wordsworth）写了《水仙花》（The Daffodils）。",
+  "linked_content": [
+   "ch4-s02-p074"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-23",
@@ -1427,31 +1475,34 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "Who was given the title of Lord Protector?",
-  "question_zh": null,
+  "question_zh": "谁被授予护国公（Lord Protector）的称号？",
   "options": [
    {
     "en": "Charles I",
-    "zh": null
+    "zh": "查理一世（Charles I）"
    },
    {
     "en": "Charles II",
-    "zh": null
+    "zh": "查理二世（Charles II）"
    },
    {
     "en": "Winston Churchill",
-    "zh": null
+    "zh": "温斯顿·丘吉尔（Winston Churchill）"
    },
    {
     "en": "Oliver Cromwell",
-    "zh": null
+    "zh": "奥利弗·克伦威尔（Oliver Cromwell）"
    }
   ],
   "answer": [
    3
   ],
   "explanation_en": "Oliver Cromwell was given the title of Lord Protector and ruled until his death in 1658.",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "奥利弗·克伦威尔（Oliver Cromwell）被授予护国公（Lord Protector）的称号并进行统治，直至1658年去世。",
+  "linked_content": [
+   "ch3-s06-p033",
+   "ch6-s02-p006"
+  ]
  },
  {
   "id": "q-british-citizenship-test-1-24",
@@ -1459,31 +1510,33 @@
   "test": "british-citizenship-test-1",
   "chapter": null,
   "question_en": "What are the 40 days before Easter called?",
-  "question_zh": null,
+  "question_zh": "复活节前的40天称为什么？",
   "options": [
    {
     "en": "Diwali",
-    "zh": null
+    "zh": "排灯节（Diwali）"
    },
    {
     "en": "Lent",
-    "zh": null
+    "zh": "大斋节（Lent）"
    },
    {
     "en": "Hannukah",
-    "zh": null
+    "zh": "光明节（Hannukah）"
    },
    {
     "en": "Vaisakhi",
-    "zh": null
+    "zh": "丰收节（Vaisakhi）"
    }
   ],
   "answer": [
    1
   ],
   "explanation_en": "The 40 days before Easter are known as Lent .",
-  "explanation_zh": null,
-  "linked_content": []
+  "explanation_zh": "复活节前的40天被称为大斋节（Lent）。",
+  "linked_content": [
+   "ch4-s03-p005"
+  ]
  },
  {
   "id": "q-british-citizenship-test-13-01",

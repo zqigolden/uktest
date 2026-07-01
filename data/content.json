@@ -462,8 +462,8 @@
   "subheading": null,
   "type": "para",
   "en": "In this chapter you will learn about the countries that make up the Union as well as the various phrases used to describe them. Although this chapter is very short you should make sure that you read and understand all facts presented. For instance it is very likely there will be questions about the differences between Great Britain, the British Isles and Britain, or what the Crown Dependencies are.",
-  "zh": null,
-  "en_simple": null,
+  "zh": "在本章中，您将学习组成联合王国（Union）的国家以及用于描述它们的各种短语。虽然本章非常短，但您应该确保阅读并理解其中呈现的所有事实。例如，极有可能会有关于大不列颠（Great Britain）、不列颠群岛（British Isles）与不列颠（Britain）之间的区别，或者什么是王室属地（Crown Dependencies）的问题。",
+  "en_simple": "Learn about the countries making up the UK and terms describing them. Understand differences between Great Britain, British Isles, and Britain, and what Crown Dependencies are.",
   "is_exam_point": false,
   "exam_note_zh": null
  },
@@ -475,7 +475,7 @@
   "subheading": null,
   "type": "para",
   "en": "IN THIS CHAPTER THERE IS INFORMATION ABOUT :",
-  "zh": null,
+  "zh": "本章包含以下方面的信息：",
   "en_simple": null,
   "is_exam_point": false,
   "exam_note_zh": null
@@ -488,7 +488,7 @@
   "subheading": null,
   "type": "list",
   "en": "• The different countries that make up the UK",
-  "zh": null,
+  "zh": "• 组成联合王国（UK）的不同国家",
   "en_simple": null,
   "is_exam_point": false,
   "exam_note_zh": null
@@ -501,7 +501,7 @@
   "subheading": null,
   "type": "para",
   "en": "The UK is made up of England, Scotland, Wales and Northern Ireland. The rest of Ireland is an independent country.",
-  "zh": null,
+  "zh": "联合王国（UK）由英格兰（England）、苏格兰（Scotland）、威尔士（Wales）和北爱尔兰（Northern Ireland）组成。爱尔兰的其余部分是一个独立国家。",
   "en_simple": null,
   "is_exam_point": false,
   "exam_note_zh": null
@@ -514,8 +514,8 @@
   "subheading": null,
   "type": "para",
   "en": "The official name of the country is the United Kingdom of Great Britain and Northern Ireland. ‘Great Britain’ refers only to England, Scotland and Wales, not to Northern Ireland. The words ‘Britain’, Isles’ or ‘British’, however, are used in this book to refer to everyone in the UK.",
-  "zh": null,
-  "en_simple": null,
+  "zh": "该国的官方名称是大不列颠及北爱尔兰联合王国（United Kingdom of Great Britain and Northern Ireland）。“大不列颠”（Great Britain）仅指英格兰（England）、苏格兰（Scotland）和威尔士（Wales），不包括北爱尔兰（Northern Ireland）。然而，本书中使用“不列颠”（Britain）、“群岛”（Isles）或“不列颠人／的”（British）这些词来指代联合王国（UK）中的每个人。",
+  "en_simple": "Official name is United Kingdom of Great Britain and Northern Ireland. 'Great Britain' includes England, Scotland, and Wales. 'Britain', 'Isles', or 'British' refer to all UK residents.",
   "is_exam_point": false,
   "exam_note_zh": null
  },
@@ -527,10 +527,10 @@
   "subheading": null,
   "type": "para",
   "en": "There are also several islands which are closely linked with the UK but are not part of it: the Channel Islands and the Isle of Man. These have their own governments and are called ‘Crown dependencies’. There are also several British overseas territories in other parts of the world, such as St Helena and the Falkland Islands. They are also linked to the UK but are not a part of it.",
-  "zh": null,
-  "en_simple": null,
-  "is_exam_point": false,
-  "exam_note_zh": null
+  "zh": "还有几个岛屿与联合王国（UK）紧密相连，但不属于它：海峡群岛（Channel Islands）和马恩岛（Isle of Man）。这些岛屿拥有自己的政府，被称为“王室属地”（Crown dependencies）。在世界其他地方也有几个英国海外领地（British overseas territories），例如圣赫勒拿（St Helena）和福克兰群岛（Falkland Islands）。它们也与联合王国（UK）相连，但不属于它。",
+  "en_simple": "Channel Islands and Isle of Man are self-governing 'Crown dependencies', linked to but not part of the UK. British overseas territories (e.g. St Helena and Falkland Islands) are also linked but not part of the UK.",
+  "is_exam_point": true,
+  "exam_note_zh": "考点：海峡群岛和马恩岛是不属于联合王国的王室属地"
  },
  {
   "id": "ch2-s02-p004",
@@ -540,7 +540,7 @@
   "subheading": null,
   "type": "para",
   "en": "The UK is governed by the parliament sitting in Westminster. Scotland, Wales and Northern Ireland also have parliaments or assemblies of their own, with devolved powers in defined areas.",
-  "zh": null,
+  "zh": "联合王国（UK）由位于威斯敏斯特（Westminster）的议会（parliament）管理。苏格兰（Scotland）、威尔士（Wales）和北爱尔兰（Northern Ireland）也拥有各自的议会或大会，在特定领域拥有下放的权力（devolved powers）。",
   "en_simple": null,
   "is_exam_point": false,
   "exam_note_zh": null
@@ -553,7 +553,7 @@
   "subheading": "Check that you understand:",
   "type": "list",
   "en": "• The different countries that make up the UK",
-  "zh": null,
+  "zh": "• 组成联合王国（UK）的不同国家",
   "en_simple": null,
   "is_exam_point": false,
   "exam_note_zh": null
@@ -9016,7 +9016,7 @@
   "subheading": null,
   "type": "para",
   "en": "In addition to this PDF version, you can also learn interactively and complete practice materials available online.",
-  "zh": null,
+  "zh": "除了这个 PDF 版本之外，您还可以在线进行互动式学习并完成练习材料。",
   "en_simple": null,
   "is_exam_point": true,
   "exam_note_zh": null
@@ -9029,7 +9029,7 @@
   "subheading": null,
   "type": "list",
   "en": "• Online study guide",
-  "zh": null,
+  "zh": "• 在线学习指南",
   "en_simple": null,
   "is_exam_point": true,
   "exam_note_zh": null
@@ -9042,7 +9042,7 @@
   "subheading": null,
   "type": "list",
   "en": "• Britizen.uk If you prefer to read a physical copy, you can buy a paper copy.\n• 45 practice tests",
-  "zh": null,
+  "zh": "• Britizen.uk 如果您更喜欢阅读纸质版，可以购买纸质书。\n• 45 套练习测试",
   "en_simple": null,
   "is_exam_point": true,
   "exam_note_zh": null
@@ -9055,7 +9055,7 @@
   "subheading": null,
   "type": "para",
   "en": "A summary of key dates and facts extracted from e-publication Life in the United Kingdom: A guide for new residents, 3rd Edition. We recommend you reading the source material to get a better context for these facts.",
-  "zh": null,
+  "zh": "从电子出版物《生活在联合王国：新居民指南（第三版）》（Life in the United Kingdom: A guide for new residents, 3rd Edition）中提取的关键日期和事实摘要。我们建议您阅读源材料，以便更好地理解这些事实的背景。",
   "en_simple": null,
   "is_exam_point": true,
   "exam_note_zh": null
@@ -9068,10 +9068,10 @@
   "subheading": null,
   "type": "list",
   "en": "• Magna Carta (1215): reduced rights of the king and laid out basic rights of the people.\n• Act for the Government of Wales (under King Henry VII, 1500s): united England and Wales\n• Habeas Corpus Act (1679): forbid unlawful imprisonment\n• Bill of Rights (1689): confirmed the rights of Parliament and the limits of the king’s power\n• Act of Union (1707): united kingdoms of England and Scotland and created Kingdom of GB\n• Reform Act (1832): abolished pocket and rotten boroughs and gave more parliamentary seats to towns and cities. Increased number of (male) voters.\n• Emancipation Act (1833): abolished slavery throughout British Empire. William Wilberforce was leading abolitionist and Quakers set up first anti-slavery groups. More than 2 million migrants came from India and China to replace labour force.\n• Women’s suffrage – 1918 (vote at 30+ yrs) and 1928 (vote at 21 yrs, same as men)\n• 1913: Home Rule proposed in Ireland. Idea was to have a self-governing Ireland with its own parliament that still remained part of the UK. WWI postponed any changes. Irish nationalists didn’t want to wait and the Easter Rising against the British in Dublin took place in 1916. Guerrilla war followed.\n• 1921: Peace treaty signed splitting Ireland in two",
-  "zh": null,
+  "zh": "• 大宪章（Magna Carta, 1215年）：限制了君主的权利，并规定了人民的基本权利。\n• 威尔士政府法案（Act for the Government of Wales，在国王亨利七世时期，1500年代）：合并了英格兰和威尔士\n• 人身保护法（Habeas Corpus Act, 1679年）：禁止非法监禁\n• 权利法案（Bill of Rights, 1689年）：确认了议会（Parliament）的权利并限制了君主的权力\n• 联合法案（Act of Union, 1707年）：合并了英格兰和苏格兰王国，并创建了大不列颠王国\n• 改革法案（Reform Act, 1832年）：废除了袖珍选区和衰败选区，并将更多议席分配给城镇和城市。增加了（男性）选民人数。\n• 废奴法案（Emancipation Act, 1833年）：在整个大英帝国废除了奴隶制。威廉·威尔伯福斯（William Wilberforce）是主要的废奴主义者，贵格会（Quakers）建立了第一个反奴隶制团体。超过200万来自印度和中国的移民来到这里以替代劳动力。\n• 女性参政权（Women’s suffrage）– 1918年（30岁以上女性获得投票权）和1928年（21岁获得投票权，与男性相同）\n• 1913年：爱尔兰提出自治（Home Rule）提案。其想法是建立一个拥有自己议会但仍属于联合王国一部分的自治爱尔兰。第一次世界大战推迟了所有变革。爱尔兰民族主义者不想等待，1916年在都柏林爆发了反抗英国人的复活节起义（Easter Rising）。随后爆发了游击战。\n• 1921年：签署和平条约，将爱尔兰分裂为两部分",
   "en_simple": null,
   "is_exam_point": true,
-  "exam_note_zh": null
+  "exam_note_zh": "考点：大宪章、人身保护法、权利法案、女性参政权等关键法案"
  },
  {
   "id": "ch6-s02-p003",
@@ -9081,10 +9081,10 @@
   "subheading": null,
   "type": "list",
   "en": "• Romans: ruled Britain from 43-410 AD (approximately 400 years). Hadrian’s wall built on orders of Roman Emperor Hadrian to keep out tribes (Picts) who lived in what is now Scotland.\n• Middle Ages (1066-1485): period of constant war, including Crusades and Hundred Years’ War.\n• Elizabethan period (1500s): known for growing patriotism, expanded trade and rich poetry and drama.\n• The Enlightenment (1700s): development of new ideas about politics, philosophy and science. Adam Smith (economics) and David Hume (philosopher) influential Scottish thinkers.\n• Industrial Revolution (from mid-1700s to 1800s). Britain produced over half of the world’s supplies of cotton cloth, coal and iron. Machinery and stream power developed.\n• Victorian Age (1837-1901): Queen Victoria reigned; Britain increased power and influence abroad. Became largest empire in world history.",
-  "zh": null,
+  "zh": "• 罗马人（Romans）：在公元43-410年统治不列颠（大约400年）。哈德良长城（Hadrian’s wall）是根据罗马皇帝哈德良的命令建造的，以抵御居住在现在苏格兰地区的部落（皮克特人）。\n• 中世纪（Middle Ages, 1066-1485）：不断战争的时期，包括十字军东征（Crusades）和百年战争（Hundred Years’ War）。\n• 伊丽莎白时代（Elizabethan period, 1500年代）：以日益高涨的爱国主义、扩大的贸易以及丰富的诗歌和戏剧而闻名。\n• 启启蒙运动（The Enlightenment, 1700年代）：政治、哲学和科学新思想的发展。亚当·斯密（Adam Smith，经济学）和大卫·休谟（David Hume，哲学家）是具有影响力的苏格兰思想家。\n• 工业革命（Industrial Revolution, 1700年代中期至1800年代）：英国生产了世界上半数以上的棉布、煤炭和钢铁供应。机器和蒸汽动力得到发展。\n• 维多利亚时代（Victorian Age, 1837-1901）：维多利亚女王在位；英国增加了在海外的力量和影响力。成为世界历史上最大的帝国。",
   "en_simple": null,
   "is_exam_point": true,
-  "exam_note_zh": null
+  "exam_note_zh": "考点：罗马统治、中世纪、伊丽莎白时代、启蒙运动、工业革命与维多利亚时代"
  },
  {
   "id": "ch6-s02-p004",
@@ -9094,7 +9094,7 @@
   "subheading": null,
   "type": "para",
   "en": "Middle classes grew significantly and reformers improved conditions for the poor.",
-  "zh": null,
+  "zh": "中产阶级显著增长，改革者改善了穷人的境况。",
   "en_simple": null,
   "is_exam_point": true,
   "exam_note_zh": null
@@ -9107,10 +9107,10 @@
   "subheading": null,
   "type": "list",
   "en": "• 1900s: jet engine and radar invented. TV & World Wide Web (Tim Berners-Lee) invented. Hovercraft invented (Sir Christopher Cockrell) and penicillin discovered (Sir Alexander Flemming). ATM invented. Cloned sheep Dolly. Developed Concorde (supersonic jet) with the French. Co-discovered insulin and co-invented the MRI. Structure of DNA molecule discovered. Radio telescope at Jodrell Bank was for many years the world’s largest. Harrier jump jet (takes off vertically). IVF therapy.\n• State retirement pension and free school meals introduced before WWI\n• 1929: Great Depression. Aviation and automobile industries developed. High unemployment, especially in “heavy” industries (e.g. shipbuilding).\n• 1942: Beveridge Report (William Beveridge) set out ideas which led to foundation of modern welfare state.\n• 1944: Education Act (R A Butler). Free secondary education and clear distinction between primary and secondary education.\n• 1945-1950: NHS and social security system established.\n• 1947: 9 colonies gained independence, including India, Pakistan, and Sri Lanka\n• 1950s: Post-war labour shortages led to recruitment of workers from India, Pakistan, West Indies and Bangladesh.\n• 1960s: Increased wealth and liberalisation of social laws (e.g. abortion and divorce).\n• 1973: UK joined the EEC\n• 1998: Good Friday Agreement led to establishment of Northern Irish parliament\n• 1999: Scottish parliament & Welsh assembly established",
-  "zh": null,
+  "zh": "• 1900年代：发明了喷气式发动机和雷达。发明了电视和万维网（World Wide Web，由蒂姆·伯纳斯-李［Tim Berners-Lee］发明）。发明了气垫船（克里斯托弗·科克雷尔爵士［Sir Christopher Cockrell］），发现了青霉素（亚历山大·弗莱明爵士［Sir Alexander Flemming］）。发明了自动取款机（ATM）。克隆羊多莉（Dolly）。与法国人一起研制了协和式客机（超音速喷气式飞机）。共同发现了胰岛素，共同发明了核磁共振成像（MRI）。发现了DNA分子的结构。乔德雷尔班克（Jodrell Bank）的射电望远镜多年来是世界上最大的射电望远镜。鹞式战斗机（垂直起飞）。试管婴儿（IVF）疗法。\n• 第一次世界大战（WWI）前引入了国家退休养老金和免费学校餐\n• 1929年：大萧条（Great Depression）。航空和汽车工业得到发展。失业率高企，特别是在“重”工业（例如造船业）中。\n• 1942年：贝弗里奇报告（Beveridge Report，由威廉·贝弗里奇［William Beveridge］撰写）提出了导致现代福利国家（welfare state）建立的想法。\n• 1944年：教育法案（Education Act，由 R A Butler 推动）。免费的中等教育，以及初等和中等教育的明确区分。\n• 1945-1950年：建立了国民医疗服务体系（NHS）和社保体系。\n• 1947年：9个殖民地获得独立，包括印度、巴基斯坦和斯里兰卡\n• 1950年代：战后劳动力短缺导致从印度、巴基斯坦、西印度群岛和孟加拉国招募工人。\n• 1960年代：财富增加以及社会法律的自由化（例如堕胎和离婚）。\n• 1973年：英国加入欧洲经济共同体（EEC）\n• 1998年：受难日协议（Good Friday Agreement）促成了北爱尔兰议会的建立\n• 1999年：苏格兰议会和威尔士议会建立",
   "en_simple": null,
   "is_exam_point": true,
-  "exam_note_zh": null
+  "exam_note_zh": "考点：20世纪重大科技发明、贝弗里奇报告、教育法案、NHS建立与地方议会成立"
  },
  {
   "id": "ch6-s02-p006",
@@ -9120,10 +9120,10 @@
   "subheading": null,
   "type": "list",
   "en": "• 1066: William of Normandy conquered England at Battle of Hastings (Bayeux Tapestry)\n• 1314: Battle of Bannockburn. Scottish King Robert the Bruce defeated the English.\n• 1455: War of the Roses. Civil war between House of Lancaster (red rose) and House of York (white rose) to determine who should be king of England. Ended at Battle of Bosworth Field (1485). Henry Tudor of House of Lancaster became King Henry VII and married Elizabeth of York, uniting the two families as the House of Tudor (red rose with a white rose inside).\n• Last of the Welsh rebellions had been defeated by mid-15th century.\n• 1588: Spanish Armada was defeated under Elizabeth I • Oliver Cromwell: titled Lord Protector (circa 1640s-1650s) and led\n• 1640: Beginning of English Civil War. Parliament (supporters: Roundheads) vs the King (Cavaliers). Charles I introduced Prayer Book; Parliament, made of Puritans, didn’t back him. King’s army defeated at Battles of Marston Moor and Naseby. King Charles I executed.\n• 1776: American colonies declare independence over taxation.\n• 1805: Battle of Trafalgar. Lord Horatio Nelson (of Nelson’s Column) defeated French (Napoleon) + Spanish fleet.\n• 1815: Battle of Waterloo. Lord Wellington defeated Napoleon.\n• 1889-1902: Boer War in South Africa.\n• 1916: Battle of the Somme WW1. British forces suffered 60,000 causalities on the first day.\n• 1918: WWI ended at 11.00 on 11/11.\n• 1939: German invasion of Poland led UK and France to declare war on Germany\n• 1940 (WWII): Evacuation of Dunkirk. Rescue of 300,000 men by volunteers and small boats.\n• 1940 (WWII): Battle of Britain. German/British aerial battle.\n• 1982: Argentina invaded Falkland Islands",
-  "zh": null,
+  "zh": "• 1066年：诺曼底的威廉（William of Normandy）在黑斯廷斯战役（Battle of Hastings）中征服了英格兰（贝叶挂毯［Bayeux Tapestry］）\n• 1314年：班诺克本战役（Battle of Bannockburn）。苏格兰国王罗伯特·布鲁斯（Robert the Bruce）击败了英格兰人。\n• 1455年：玫瑰战争（War of the Roses）。兰开斯特家族（House of Lancaster，红玫瑰）与约克家族（House of York，白玫瑰）之间为争夺英格兰王位而爆发的内战。结束于博斯沃思战役（Battle of Bosworth Field, 1485年）。兰开斯特家族的亨利·都铎成为国王亨利七世，并迎娶了约克家族的伊丽莎白，将两个家族合并为都铎王朝（House of Tudor，红玫瑰中含白玫瑰）。\n• 威尔士人最后一次叛乱在15世纪中期被击败。\n• 1588年：在伊丽莎白一世（Elizabeth I）统治下西班牙无敌舰队（Spanish Armada）被击败 • 奥利弗·克伦威尔（Oliver Cromwell）：被封为护国公（Lord Protector，约1640-1650年代）并领导\n• 1640年：英格兰内战（English Civil War）开始。议会（支持者：圆颅党［Roundheads］）对抗国王（骑士党［Cavaliers］）。查理一世引入了《公祷书》（Prayer Book）；主要由清教徒（Puritans）组成的议会不支持他。国王的军队在马斯顿荒原战役（Battle of Marston Moor）和纳斯比战役（Battle of Naseby）中被击败。国王查理一世被处决。\n• 1776年：美洲殖民地因税收问题宣布独立。\n• 1805年：特拉法加海战（Battle of Trafalgar）。霍拉肖·纳尔逊勋爵（Lord Horatio Nelson，纳尔逊纪念柱）击败了法国（拿破仑）和西班牙的联合舰队。\n• 1815年：滑铁卢战役（Battle of Waterloo）。威灵顿公爵（Lord Wellington）击败了拿破仑。\n• 1889-1902年：南非布尔战争（Boer War）。\n• 1916年：第一次世界大战索姆河战役（Battle of the Somme）。英军在第一天就遭受了6万人的伤亡。\n• 1918年：第一次世界大战在11月11日11:00结束。\n• 1939年：德国入侵波兰导致英国和法国对德宣战\n• 1940年（第二次世界大战）：敦刻尔克大撤退（Evacuation of Dunkirk）。志愿者和小型船只营救了30万名士兵。\n• 1940年（第二次世界大战）：不列颠战役（Battle of Britain）。德英空战。\n• 1982年：阿根廷入侵福克兰群岛",
   "en_simple": null,
   "is_exam_point": true,
-  "exam_note_zh": null
+  "exam_note_zh": "考点：诺曼征服、玫瑰战争、西班牙无敌舰队、英格兰内战、世界大战等重大战争与战役"
  },
  {
   "id": "ch6-s02-p007",
@@ -9133,10 +9133,10 @@
   "subheading": null,
   "type": "list",
   "en": "• 1348: Black Death. Killed over 1/3 of Britain. Fewer people meant less need for cereal crops as well as labour shortages, then increased wages. Movement into cities and towns. Gentry (landowners of large plots) and middle class developed.\n• 1400: English became preferred language of courts and official documents.\n• 1660: The Restoration (of the monarchy). Charles (King of Scotland) invited to come back as King Charles II after Oliver Cromwell’s death.\n• 1665: Great Plague\n• Glorious Revolution (1688): English Protestants asked Mary’s husband William of Orange (of the Netherlands) to proclaim himself king, as didn’t want a Catholic king. He faced no resistance.\n• During Queen Elizabeth I’s reign, English settlers began to move to North American colonies.",
-  "zh": null,
+  "zh": "• 1348年：黑死病（Black Death）。夺去了不列颠三分之一以上的人口。人口减少意味着对谷物作物的需求减少以及劳动力短缺，随后工资提高。人口流向城市和城镇。乡绅（Gentry，大块土地的所有者）和中产阶级开始发展。\n• 1400年：英语成为法庭和官方文件的首选语言。\n• 1660年：王政复辟（The Restoration）。奥利弗·克伦威尔（Oliver Cromwell）死后，苏格兰国王查理受邀返回成为国王查理二世（King Charles II）。\n• 1665年：伦敦大瘟疫（Great Plague）\n• 光荣革命（Glorious Revolution, 1688年）：英国新教徒邀请玛丽的丈夫、来自荷兰的奥兰治的威廉（William of Orange）宣布自己为国王，因为他们不想要一个天主教国王。he 面对没有阻力。\n• 在女王伊丽莎白一世（Queen Elizabeth I）统治期间，英国定居者开始移居北美殖民地。",
   "en_simple": null,
   "is_exam_point": true,
-  "exam_note_zh": null
+  "exam_note_zh": "考点：黑死病、王政复辟、伦敦大瘟疫与光荣革命等关键历史事件"
  },
  {
   "id": "ch6-s02-p008",
@@ -9146,9 +9146,9 @@
   "subheading": null,
   "type": "list",
   "en": "• Sir Robert Walpole: first PM (1721-1742) as King George I (a German) relied heavily on ministers because of his poor English Britain whilst it was without a monarch\n• King Alfred the Great united the Anglo-Saxon kingdoms of England and defeated the Vikings.\n• Isambard Kingdom Brunel: engineer (bridges, trains, tunnels, ships)\n• Dylan Thomas: Welsh poet (“Under Milk Wood” & “Do Not Go Gentle into that Good Night”)\n• Robert Burns: Scottish poet (“The Bard”), Auld Lang Syne\n• Richard Arkwright: Efficient and profitable factory owner during Industrial Revolution\n• Sake Dean Mahomet: set up first curry house in Britain and introduced shampooing\n• Florence Nightingale: founder of modern nursing\n• Emmeline Pankhurst: Suffrage leader\n• Rudyard Kipling: Indian-born author and poet. Work reflected idea that British empire was a force for good.\n• George and Robert Stevenson: famous pioneers of railway engines\n• St Columba & St Augustine: led missionaries from Rome.\n• Sir Francis Drake: Elizabethan sailor who helped defeat Spanish Armada and who later sailed around the world.\n• Hugunots: French Protestants feeling prosecution settled in England pre-1720\n• Henry VIII: famous for marrying 6 times and breaking away from Church of Rome so he could get a divorce. Wales was united with England under his rule. Wives (in order): (1) Catherine of Aragon (2) Anne Boleyn (3) Jane Seymour (4) Anne of Cleves (5) Catherine Howard (6) Catherine Parr\n• Margaret Thatcher was first female PM and the longest serving PM of the 20th century.\n• Alexander Fleming: Scottish doctor who discovered penicillin (1928)\n• Clement Attlee: Churchill’s Deputy PM. Became PM in 1945. Nationalised major industries and created NHS.\n• Mary Peters: Olympic athlete who promoted sport and tourism in Northern Ireland.\n• Roald Dahl: Welsh author (“Charlie and the Chocolate Factory” & “George’s Marvellous Medicine”).\n• Sir Arthur Conan Doyle: Scottish author (“Sherlock Holmes”)",
-  "zh": null,
+  "zh": "• 罗伯特·沃波尔爵士（Sir Robert Walpole）：第一任首相（1721-1742），因为国王乔治一世（King George I，德国人）的英语不好，所以高度依赖大臣们管理英国，当时英国没有君主\n• 阿尔弗雷德大帝（King Alfred the Great）统一了英格兰的盎格鲁-撒克逊王国并击败了维京人。\n• 伊桑巴德·金德姆·布鲁内尔（Isambard Kingdom Brunel）：工程师（桥梁、火车、隧道、轮船）\n• 狄兰·托马斯（Dylan Thomas）：威尔士诗人（代表作《牛奶树下》［Under Milk Wood］和《不要温和地走进那个良夜》［Do Not Go Gentle into that Good Night］）\n• 罗伯特·彭斯（Robert Burns）：苏格兰诗人（“吟游诗人”［The Bard］），代表作《友谊地久天长》（Auld Lang Syne）\n• 理查德·阿克莱特（Richard Arkwright）：工业革命时期高效且盈利丰厚的工厂主\n• 谢赫·迪恩·马霍梅特（Sake Dean Mahomet）：在英国开设了第一家咖喱屋并引进了洗发洗头（shampooing）\n• 弗洛伦斯·南丁格尔（Florence Nightingale）：现代护理学创始人\n• 艾米琳·潘克赫斯特（Emmeline Pankhurst）：女性参政权运动领袖\n• 鲁德亚德·吉卜林（Rudyard Kipling）：出生于印度的作家和诗人。他的作品反映了大英帝国是一股向善力量的思想。\n• 乔治·史蒂芬森和罗伯特·史蒂芬森（George and Robert Stevenson）：著名的铁路机车先驱\n• 圣哥伦巴和圣奥古斯丁（St Columba & St Augustine）：领导了来自罗马的传教士。\n• 弗朗西斯·德雷克爵士（Sir Francis Drake）：伊丽莎白时代的航海家，曾协助击败西班牙无敌舰队，后来完成了环球航行。\n• 胡格诺派（Huguenots）：为逃避迫害而于1720年前在英格兰定居的法国新教徒\n• 亨利八世（Henry VIII）：以结过6次婚并脱离罗马教廷以便离婚而闻名。威尔士在他的统治下与英格兰合并。妻子（按顺序）：(1) 阿拉贡的凯瑟琳（Catherine of Aragon） (2) 安妮·博林（Anne Boleyn） (3) 珍·西摩（Jane Seymour） (4) 克莱芙的安妮（Anne of Cleves） (5) 凯瑟琳·霍华德（Catherine Howard） (6) 凯瑟琳·帕尔（Catherine Parr）\n• 玛格丽特·撒切尔（Margaret Thatcher）是第一位女首相，也是20世纪任职时间最长的首相。\n• 亚历山大·弗莱明（Alexander Fleming）：苏格兰医生，于1928年发现了青霉素\n• 克莱门特·艾德礼（Clement Attlee）：丘吉尔的副首相。在1945年成为首相。将主要工业国有化并创建了国民医疗服务体系（NHS）。\n• 玛丽·彼得斯（Mary Peters）：奥运会运动员，在北爱尔兰推广体育和旅游业。\n• 罗尔德·达尔（Roald Dahl）：威尔士作家（代表作《查理和巧克力工厂》［Charlie and the Chocolate Factory］和《乔治的神奇药水》［George’s Marvellous Medicine］）。\n• 亚瑟·柯南·道尔爵士（Sir Arthur Conan Doyle）：苏格兰作家（代表作《福尔摩斯》［Sherlock Holmes］）",
   "en_simple": null,
   "is_exam_point": true,
-  "exam_note_zh": null
+  "exam_note_zh": "考点：英国历史上的重要科学、文学、政治及社会杰出人物"
  }
 ]
