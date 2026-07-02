@@ -37,7 +37,9 @@ No test suite yet; `typecheck` + `validate` are the CI gates (see `.github/workf
 
 Two halves, connected only through `data/*.json`:
 
-1. **Python pipeline** (`scripts/`): `extract_pdf.py` parses the PDF's visual layout with pdfplumber (font-size heading classification, two-column pages 97–98, borderless-table detection — the header comments document the measured layout constants; markitdown/pdfminer were evaluated and produce broken column order, don't switch back). `scrape_questions.py` parses cached HTML (answers live in a `const solution` JS blob; option ids are NOT always 0-based — True/False questions use r1/r2, resolve via `data-id_answer`).
+1. **Python pipeline** (`scripts/`): `extract_pdf.py` parses the PDF's visual layout with pdfplumber (font-size heading classification, per-page gutter detection + band-based two-column handling on 10 mixed-layout pages, borderless-table detection — the header comments document the measured layout constants; markitdown/pdfminer were evaluated and produce broken column order, don't switch back). `scrape_questions.py` parses cached HTML (answers live in a `const solution` JS blob; option ids are NOT always 0-based — True/False questions use r1/r2, resolve via `data-id_answer`).
+
+   **Re-extraction safety**: `extract_pdf.py` carries `zh`/`en_simple`/`exam_note_zh` over from the existing content.json for units whose English text is unchanged (matched by id, then by unique `en`). Units whose text changed lose enrichment and must be retranslated. Content **ids are NOT stable** across extraction changes (they encode per-section sequence): after any re-extraction, `questions.json` `linked_content` must be remapped by matching old→new unit English text, then spot-checked semantically — id-existence alone is not enough (validate.py only checks existence).
 2. **React app** (`src/`): Vite + React + TS, HashRouter + `base: "./"` (both required for GitHub Pages). Data JSONs are dynamic-imported in `src/data.ts` so they become lazy chunks. All user state (attempts, sessions, read-section marks, `lastRead`) lives in IndexedDB via `src/db.ts`; UI prefs in localStorage via `useSetting`. The wrong-answer book is derived: a question is "wrong" iff its most recent attempt is incorrect.
 
 Bilingual rendering rule (`src/pages/ReadSection.tsx`): `zh`/`en_simple` fields may be null (enrichment pending) and every view must degrade to English original; list units pair EN/ZH bullet lines by index and fall back to block rendering on count mismatch.
@@ -65,7 +67,11 @@ Bilingual rendering rule (`src/pages/ReadSection.tsx`): `zh`/`en_simple` fields 
 
 ### lifeintheuktestweb.co.uk
 
-- Question source; needs scraping (one-off script, output committed as static JSON). Questions are organized as practice tests per chapter plus full mock exams. Keep the original English question text verbatim and add Chinese translations as a separate field.
+- Scraped (2,160 questions / 90 test sets, raw HTML cached in `data/raw/*.html.gz`). The site's Exams 1–17 are the app's primary practice content; general tests are optional extras. English question text is kept verbatim; Chinese translations are separate fields.
+
+### Enrichment working files
+
+- `scratch/` (gitignored) holds translation batch chunks produced by the Gemini-side tooling. Never read it as a source of truth — the canonical state is only `data/*.json`.
 
 ## Conventions
 

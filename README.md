@@ -13,15 +13,15 @@ Mobile-first web app for preparing the [Life in the UK Test](https://www.gov.uk/
 
 ## Status
 
-**Done**: data pipeline, full app, CI/CD to GitHub Pages.
-**Pending**: content enrichment — all `zh` / `en_simple` / `linked_content` fields are still `null`; the app renders English-only until they are filled (see [Roadmap](#roadmap)).
+**Done**: data pipeline, full app, CI/CD to GitHub Pages. First enrichment pass landed: **content translation 642/752 units**, all **17 mock exams fully translated and linked to the handbook** (408/2160 questions).
+**Pending**: 110 content units await retranslation (invalidated by an extraction fix), chapter/general question translations, simplified-English layer (3/752). The app degrades to English wherever Chinese is missing. See [Roadmap](#roadmap) and the status table in [AI_TASKS.md](AI_TASKS.md).
 
 ## Architecture
 
 Two halves, connected only through committed JSON files. No backend — deployable anywhere static.
 
 ```
-document.pdf ──▶ scripts/extract_pdf.py ──▶ data/content.json   (704 units)
+document.pdf ──▶ scripts/extract_pdf.py ──▶ data/content.json   (752 units)
 site HTML   ──▶ scripts/scrape_questions.py ──▶ data/questions.json (2160)
 (cached in data/raw/*.html.gz)              └─▶ data/tests.json  (90 sets)
                                                     │
@@ -52,7 +52,8 @@ site HTML   ──▶ scripts/scrape_questions.py ──▶ data/questions.json 
 The PDF (mkdocs + WeasyPrint output, 98 pages) is parsed by visual layout. Measured constants are documented in the script header. The non-obvious parts:
 
 - **Headings by font**: body is Times 7.8pt; Helvetica sizes map to levels (15.5 chapter / 12.1 section / 9.7 subsection / 7.8 sub-sub / 6.2 small-caps boxes).
-- **Two-column pages 97–98** (ch. 6.2 "Key Material and Facts" — the exam-summary chapter): naive top-sorted extraction interleaves the columns into garbage. Words are split at the x≈310 gutter and read left column then right; full-width intro lines above the column region are processed first; an unfinished paragraph at a column/page break continues into the next column/page.
+- **Two-column regions** (10 pages: 80, 84–85, 88–89, 93–95 in chapter 5, 97–98 in ch. 6.2): naive top-sorted extraction interleaves the columns into garbage. The gutter x-position is detected per page (it varies), then lines are split into *bands*: full-width prose stays in normal flow, maximal runs of column lines are read left column then right. Band boundaries always flush the paragraph buffer, so text never merges across regions (the trade-off: a sentence flowing across a page break inside a column region becomes two units).
+- **Re-extraction is enrichment-safe**: translated fields are carried over for units whose English text is unchanged; the script prints how many translated units were dropped. Content ids are **not stable** across extractor changes — `linked_content` in questions.json must then be remapped by matching unit text (id existence is checked by validate.py, semantic correctness is not).
 - **Borderless tables** (Commonwealth members 5-column list, population-by-year): detected by anchor voting — recurring segment-start x positions with ≥3 rows having cells in ≥2 columns; a cell must end before the next anchor (this excludes prose that happens to start at an anchor). ≥3 columns → read column-wise (semantic lists); 2 columns → row-wise (`1600 — Just over 4 million`).
 - **Noise filtering**: page headers/footers by y-position; image captions = body lines just below an image bbox (images are decorative and dropped).
 
@@ -92,9 +93,9 @@ Python scripts need `pdfplumber`, `requests`, `beautifulsoup4` (validate.py is s
 
 ## Roadmap
 
-1. **Content enrichment (next, unblocked)** — bulk-translation phase per [AI_TASKS.md](AI_TASKS.md) §Gemini: G1 translate content units, G2 translate questions, G3 simplified-English rewrites, G4 question↔content mapping (`linked_content`, upgrades `is_exam_point` beyond the 11 seeded ch-6 units). Batch order: exam questions → chapter → general; content ch. 6 → 1–5. Terminology must follow [data/glossary.md](data/glossary.md); merge batches only through `validate.py`.
-2. **F7 review queue** — spot-check merged batches, resolve `"ESCALATE"` markers.
-3. **Ideas, unscheduled** — link exam-point highlights to their questions in the reading view (needs G4); per-question stats on the mistake book; PWA manifest for offline/home-screen use; timed exam mode (45 min, like the real test).
+1. **Finish content enrichment** (per [AI_TASKS.md](AI_TASKS.md) §Gemini, which has the authoritative status table): retranslate the 110 content units invalidated by the extraction fix (mostly sections 5.4–5.8), then question translations for chapter tests (792) and general tests (960), then G4 links for those, then G3 simplified-English rewrites (3/752 done). Terminology must follow [data/glossary.md](data/glossary.md); merge batches only through `validate.py`.
+2. **F7 review queue** — spot-check merged batches, resolve `"ESCALATE"` markers. Done so far: fixed chapter-5 column interleaving (2026-07-02), remapped all question links after re-extraction, corrected 31 mislinked questions.
+3. **Ideas, unscheduled** — link exam-point highlights to their questions in the reading view (needs G4 complete); per-question stats on the mistake book; PWA manifest for offline/home-screen use; timed exam mode (45 min, like the real test).
 
 ## Related docs
 

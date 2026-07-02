@@ -87,7 +87,37 @@ Maintained by Fable 5, consumed by Gemini in every translation prompt. Guarantee
 
 **Owns:** everything under version control except the `zh` / `en_simple` / `exam_note_zh` / `linked_content` field *values*.
 
-**Status: F1–F6 and F8 are DONE** (2026-07-01). Remaining: F7 review queue (ongoing, as Gemini batches land). Gemini phase (G1–G4) is now unblocked.
+**Status (2026-07-02): F1–F6 and F8 DONE; F7 active.**
+
+Enrichment progress after the first Gemini pass (2026-07-01/02):
+
+| Field | Coverage | Notes |
+|---|---|---|
+| content `zh` | 642/752 | 110 pending: extraction fix invalidated garbled units (see F7 log) |
+| content `en_simple` | 3/752 | G3 essentially not started |
+| questions `question_zh` + options + explanations | 408/2160 | all 17 mock exams done; chapter (792) + general (960) remain |
+| questions `linked_content` | 408 | exam questions only |
+| `is_exam_point` | 15 | 14 seeded from ch6 + 1 from G4 |
+
+**F7 log (2026-07-02)**: chapter-5 pages mix full-width prose with side-by-side
+columns; the original extractor interleaved them, so ~10% of ch5 units were
+garbage and Gemini had faithfully translated garbage. Fixed extract_pdf.py
+(per-page gutter detection + band splitting; now 10 two-column pages: 80, 84,
+85, 88, 89, 93, 94, 95, 97, 98), re-extracted (704→752 units), auto-remapped
+all `linked_content` ids by matching unit English text, and manually corrected
+31 semantically wrong links (G4 had also mislinked e.g. Mary Peters and
+"republic" questions). Re-extraction now carries enrichment forward
+automatically for text-identical units.
+
+**Rule added**: content ids are NOT stable across extractor changes. After any
+re-extraction: (1) check the "translated units dropped" count it prints,
+(2) remap `linked_content` old→new by unit text, (3) spot-check links whose
+target text changed. validate.py only proves link ids exist, not that they
+point at the right unit.
+
+**Next Gemini batches, in order**: (a) retranslate the 110 null-`zh` content
+units (sections 5.4–5.8 mostly), (b) G2 chapter-test questions, (c) G2 general
+questions, (d) G4 links for newly translated questions, (e) G3 simplification.
 
 Tasks, in order:
 

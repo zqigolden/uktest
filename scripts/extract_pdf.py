@@ -38,9 +38,9 @@ CAPTION_BELOW_IMAGE = 25
 SEG_GAP = 14          # min horizontal gap that separates table cells
 INK_BRIDGE = 6        # bridge inter-word spaces when merging ink runs
 ANCHOR_TOL = 4        # x tolerance for matching a segment start to an anchor
-COL_CHANNEL = (300, 320)   # x zone of the two-column page gutter
-COL_CLEAR_FRAC = 0.85      # fraction of lines that must be clear of the gutter
-COL_MIN_BOTH = 5           # lines with ink on both sides of the gutter
+GUTTER_SEARCH = range(250, 401, 5)  # candidate x positions for a column gutter
+GUTTER_MIN_RIGHT = 5   # lines entirely right of the gutter
+GUTTER_MIN_LEFT = 5    # lines entirely left of (or split by) the gutter
 
 TERMINAL = tuple(".!?:;”’)")
 
@@ -98,35 +98,70 @@ def build_lines(words, img_bottoms):
     return out
 
 
-def two_column_split(words):
-    """Return [preamble, left, right] word groups if the page is two-column.
+def find_gutter(lines):
+    """Detect a two-column gutter x position, or None.
 
-    Full-width lines above the column region (e.g. an intro paragraph) must
-    not be chopped at the gutter, so everything above the first fully-right
-    line is processed as normal flow.
+    Chapter 5 mixes full-width paragraphs with side-by-side column regions and
+    the gutter position varies by page (x~310 on pp.97-98, the right column
+    starts at 315 on p.80), so scan candidates. Full-width lines are fine —
+    they are routed to normal flow by the band splitter — but a candidate
+    crossed by too many lines is just running through prose.
     """
-    lo, hi = COL_CHANNEL
-    lines = group_lines(words)
-    if not lines:
-        return None
-    clear = both = 0
+    best = None
+    for gx in GUTTER_SEARCH:
+        left = right = split = cross = 0
+        for line in lines:
+            ln = line["words"]
+            if any(w["x0"] < gx < w["x1"] for w in ln):
+                cross += 1
+                continue
+            has_l = any(w["x1"] <= gx for w in ln)
+            has_r = any(w["x0"] >= gx for w in ln)
+            if has_l and has_r:
+                split += 1
+            elif has_r:
+                right += 1
+            elif has_l:
+                left += 1
+        if right >= GUTTER_MIN_RIGHT and left + split >= GUTTER_MIN_LEFT and cross <= 0.4 * len(lines):
+            score = split + min(left, right) - cross
+            if best is None or score > best[1]:
+                best = (gx, score)
+    return best[0] if best else None
+
+
+def split_bands(lines, gx):
+    """Split a page into ('flow', lines) and ('cols', left_words, right_words) bands.
+
+    A line whose ink crosses the gutter is full-width prose; maximal runs of
+    non-crossing lines that contain enough right-column material become column
+    bands, read left column then right. Everything else stays in normal flow.
+    """
+    bands, run = [], []
+
+    def close_run():
+        if not run:
+            return
+        rights = sum(1 for ln in run if all(w["x0"] >= gx for w in ln["words"]))
+        if rights >= 2 and len(run) >= 4:
+            left = [w for ln in run for w in ln["words"] if w["x0"] < gx]
+            right = [w for ln in run for w in ln["words"] if w["x0"] >= gx]
+            bands.append(("cols", left, right))
+        else:
+            bands.append(("flow", list(run)))
+        run.clear()
+
     for ln in lines:
-        crossing = any(w["x0"] < hi and w["x1"] > lo for w in ln)
-        if not crossing:
-            clear += 1
-            if min(w["x0"] for w in ln) < lo and max(w["x1"] for w in ln) > hi:
-                both += 1
-    if clear / len(lines) < COL_CLEAR_FRAC or both < COL_MIN_BOTH:
-        return None
-    mid = (lo + hi) / 2
-    right_tops = [
-        ln[0]["top"] for ln in lines if all(w["x0"] >= mid for w in ln)
-    ]
-    col_top = min(right_tops) - LINE_GROUP_TOL if right_tops else 0
-    pre = [w for w in words if w["top"] < col_top]
-    left = [w for w in words if w["top"] >= col_top and w["x0"] < mid]
-    right = [w for w in words if w["top"] >= col_top and w["x0"] >= mid]
-    return [pre, left, right]
+        if any(w["x0"] < gx < w["x1"] for w in ln["words"]):
+            close_run()
+            if bands and bands[-1][0] == "flow":
+                bands[-1][1].append(ln)
+            else:
+                bands.append(("flow", [ln]))
+        else:
+            run.append(ln)
+    close_run()
+    return bands
 
 
 def segments(line):
@@ -360,12 +395,50 @@ def main():
                 if HEADER_TOP <= w["top"] <= FOOTER_TOP
             ]
             img_bottoms = [img["bottom"] for img in page.images]
-            split = two_column_split(words)
-            if split:
-                two_col_pages.append(pageno)
-            for col_words in split if split else [words]:
-                b.process(build_lines(col_words, img_bottoms), flow_break_first=True)
+            lines = build_lines(words, img_bottoms)
+            gx = find_gutter(lines) if len(lines) >= 12 else None
+            if gx is None:
+                b.process(lines, flow_break_first=True)
+                continue
+            two_col_pages.append(pageno)
+            for band in split_bands(lines, gx):
+                b.flush()  # hard boundary: never merge text across bands
+                if band[0] == "flow":
+                    b.process(band[1], flow_break_first=True)
+                else:
+                    _, left_words, right_words = band
+                    b.process(build_lines(left_words, img_bottoms), flow_break_first=True)
+                    b.flush()
+                    b.process(build_lines(right_words, img_bottoms), flow_break_first=True)
     b.flush()
+
+    # Re-extraction must not wipe enrichment (zh / en_simple / exam notes):
+    # carry fields over from the existing file for units whose English text is
+    # unchanged — matched by id first, then by unique en text (handles id
+    # shifts when a layout fix changes unit boundaries inside a section).
+    carried = orphaned = 0
+    if OUT.exists():
+        old_units = json.loads(OUT.read_text(encoding="utf-8"))
+        by_id = {u["id"]: u for u in old_units}
+        by_en = {}
+        for u in old_units:
+            by_en.setdefault(u["en"], []).append(u)
+        for u in b.units:
+            o = by_id.get(u["id"])
+            if not (o and o["en"] == u["en"]):
+                cands = by_en.get(u["en"], [])
+                o = cands[0] if len(cands) == 1 else None
+            if o:
+                u["zh"] = o["zh"]
+                u["en_simple"] = o["en_simple"]
+                u["exam_note_zh"] = o["exam_note_zh"]
+                u["is_exam_point"] = o["is_exam_point"] or u["is_exam_point"]
+                carried += 1
+        enriched_old = sum(1 for u in old_units if u["zh"])
+        enriched_new = sum(1 for u in b.units if u["zh"])
+        orphaned = enriched_old - enriched_new
+        print(f"enrichment carried for {carried}/{len(b.units)} units "
+              f"({max(orphaned, 0)} translated units dropped/changed -> retranslate)")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(b.units, ensure_ascii=False, indent=1), encoding="utf-8")
