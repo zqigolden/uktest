@@ -93,11 +93,15 @@ Enrichment progress after the first Gemini pass (2026-07-01/02):
 
 | Field | Coverage | Notes |
 |---|---|---|
-| content `zh` | 642/752 | 110 pending: extraction fix invalidated garbled units (see F7 log) |
+| content `zh` | **752/752 ✓** | 110 re-fixed units translated by the local LM Studio model (2026-07-02), Fable-reviewed |
 | content `en_simple` | 3/752 | G3 essentially not started |
-| questions `question_zh` + options + explanations | 408/2160 | all 17 mock exams done; chapter (792) + general (960) remain |
+| questions `question_zh` + options + explanations | 408/2160 | all 17 mock exams done; chapter/general test translation **deferred by user decision** (2026-07-02) — exams are the primary practice content |
 | questions `linked_content` | 408 | exam questions only |
 | `is_exam_point` | 15 | 14 seeded from ch6 + 1 from G4 |
+
+Note: the local LM Studio model handled the 110-unit retranslation batch well
+(same prompt contract as Gemini, zero ESCALATE, 2 style fixes in review), so it
+is an acceptable fallback for small content batches, not just QA.
 
 **F7 log (2026-07-02)**: chapter-5 pages mix full-width prose with side-by-side
 columns; the original extractor interleaved them, so ~10% of ch5 units were

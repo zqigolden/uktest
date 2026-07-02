@@ -13,8 +13,8 @@ Mobile-first web app for preparing the [Life in the UK Test](https://www.gov.uk/
 
 ## Status
 
-**Done**: data pipeline, full app, CI/CD to GitHub Pages. First enrichment pass landed: **content translation 642/752 units**, all **17 mock exams fully translated and linked to the handbook** (408/2160 questions).
-**Pending**: 110 content units await retranslation (invalidated by an extraction fix), chapter/general question translations, simplified-English layer (3/752). The app degrades to English wherever Chinese is missing. See [Roadmap](#roadmap) and the status table in [AI_TASKS.md](AI_TASKS.md).
+**Done**: data pipeline, full app, CI/CD to GitHub Pages. **Handbook translation complete (752/752 units)**; all **17 mock exams fully translated and linked to the handbook** (408 questions).
+**Pending / deferred**: chapter & general test translations (deferred — mock exams are the primary practice content), simplified-English layer (3/752). The app degrades to English wherever Chinese is missing. See [Roadmap](#roadmap) and the status table in [AI_TASKS.md](AI_TASKS.md).
 
 ## Architecture
 
