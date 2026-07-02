@@ -8,7 +8,7 @@ This document is written for LLM consumption. Each model reads its own section a
 |---|---|---|---|
 | **Fable 5** | Architect / Engineer | Expensive — use sparingly, high leverage | Design, all code, schemas, ambiguous decisions, final review |
 | **Gemini 3.5 Flash** | Bulk content worker | Cheap, high throughput | Translation, simplification, first-pass tagging — large batches of schema-constrained work |
-| **LM Studio (local)** | QA assistant (optional) | Free, slow, limited | Semantic spot-checks on translated content; anything skippable |
+| **LM Studio (local)** | QA + small translation batches | Free, slow | Model: `zqigolden/qwen3.6-35b-a3b-instant` at `http://127.0.0.1:1234/v1/chat/completions` (OpenAI-compatible). Proven on the 110-unit content batch; use the same prompt contract as Gemini |
 
 ### Routing rules
 
@@ -161,9 +161,17 @@ Tasks (parallelizable):
 
 ---
 
-## LM Studio Local Model — QA Assistant (optional)
+## LM Studio Local Model — QA Assistant + Small Batches
 
-Skippable entirely; deterministic validation (F4) is the required safety net. If used:
+**Fixed configuration (user decision 2026-07-02):** model
+`zqigolden/qwen3.6-35b-a3b-instant`, endpoint
+`http://127.0.0.1:1234/v1/chat/completions` (OpenAI-compatible),
+`temperature: 0.1`. For translation batches, reuse the Gemini prompt contract
+(G-section operating rules) plus per-item list line-count validation and
+individual retry — reference implementation: `scratch/retrans_pending.py`
+(gitignored working file; recreate from this description if absent).
+
+QA duties below are skippable; deterministic validation (F4) is the required safety net. If used:
 
 1. **L1 — Translation spot-check**: given `{id, en, zh}` pairs, output `{"id": ..., "ok": true/false, "issue": "one line, only if ok=false"}`. Check: meaning preserved, numbers/dates/names match, nothing omitted or invented. Flag, don't fix.
 2. **L2 — Simplification fact-check**: given `{id, en, en_simple}`, verify no testable fact (name/date/number) present in `en` is missing from `en_simple`. Same output format as L1.
