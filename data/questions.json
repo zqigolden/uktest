@@ -1660,30 +1660,30 @@
   "test": "british-citizenship-test-13",
   "chapter": null,
   "question_en": "Boudicca, was a tribal leader who fought against which foreign invaders?",
-  "question_zh": "TRANSLATION_FAILED",
+  "question_zh": "布狄卡是一位部落领袖，她反抗的是哪支外国入侵者？",
   "options": [
    {
     "en": "The Normands",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "诺曼人"
    },
    {
     "en": "The Vikings",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "维京人"
    },
    {
     "en": "The Anglo-Saxons",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "盎格鲁-撒克逊人"
    },
    {
     "en": "The Romans",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "罗马人"
    }
   ],
   "answer": [
    3
   ],
   "explanation_en": "One of the tribal leaders who fought against the Romans was Boudicca, the queen of the Iceni.",
-  "explanation_zh": "TRANSLATION_FAILED",
+  "explanation_zh": "反抗罗马人的部落领袖之一是布狄卡，她是爱西尼（Iceni）部落的女王。",
   "linked_content": [
    "ch3-s07-p004"
   ]
@@ -1830,30 +1830,30 @@
   "test": "british-citizenship-test-13",
   "chapter": null,
   "question_en": "Who was William Caxton?",
-  "question_zh": "TRANSLATION_FAILED",
+  "question_zh": "威廉·卡克斯顿是谁？",
   "options": [
    {
     "en": "A poet who wrote about a group of people going to Canterbury on a pilgrimage",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "一位描写一群人前往坎特伯雷朝圣的诗人"
    },
    {
     "en": "The first person in England to print books using a printing press",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "英格兰第一个使用印刷机印刷书籍的人"
    },
    {
     "en": "The first person to sail singlehanded around the world",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "第一个单人环球航行的人"
    },
    {
     "en": "The inventor of the television",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "电视机的发明者"
    }
   ],
   "answer": [
    1
   ],
   "explanation_en": "William Caxton was the first person in England to print books using a printing press .",
-  "explanation_zh": "TRANSLATION_FAILED",
+  "explanation_zh": "威廉·卡克斯顿是英格兰第一个使用印刷机印刷书籍的人。",
   "linked_content": [
    "ch3-s05-p016"
   ]
@@ -1864,30 +1864,30 @@
   "test": "british-citizenship-test-13",
   "chapter": null,
   "question_en": "Where do Beefeaters serve as tour guides?",
-  "question_zh": "TRANSLATION_FAILED",
+  "question_zh": "御用侍卫（Beefeaters）在哪里担任导游？",
   "options": [
    {
     "en": "The Houses of the Parliament",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "议会大厦"
    },
    {
     "en": "The Tower of London",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "伦敦塔"
    },
    {
     "en": "The O2",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "O2体育馆"
    },
    {
     "en": "The Big Ben",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "大本钟"
    }
   ],
   "answer": [
    1
   ],
   "explanation_en": "Beefeaters serve as tour guides at the Tower of London .",
-  "explanation_zh": "TRANSLATION_FAILED",
+  "explanation_zh": "御用侍卫在伦敦塔担任导游。",
   "linked_content": [
    "ch4-s05-p012"
   ]
@@ -1898,30 +1898,30 @@
   "test": "british-citizenship-test-13",
   "chapter": null,
   "question_en": "During the rebellion of the clans in Scotland, Bonnie Prince Charlie was supported by clansmen from which Scottish region?",
-  "question_zh": "TRANSLATION_FAILED",
+  "question_zh": "在苏格兰的氏族叛乱期间，邦尼王子查理得到了来自苏格兰哪个地区的氏族成员的支持？",
   "options": [
    {
     "en": "Glasgow",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "格拉斯哥"
    },
    {
     "en": "Galloway",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "加洛韦"
    },
    {
     "en": "The Highlands",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "苏格兰高地"
    },
    {
     "en": "Edinburgh",
-    "zh": "TRANSLATION_FAILED"
+    "zh": "爱丁堡"
    }
   ],
   "answer": [
    2
   ],
   "explanation_en": "Charles Edward Stuart (Bonnie Prince Charlie) was supported by clansmen from the Scottish Highlands .",
-  "explanation_zh": "TRANSLATION_FAILED",
+  "explanation_zh": "查尔斯·爱德华·斯图亚特（邦尼王子查理）得到了来自苏格兰高地的氏族成员的支持。",
   "linked_content": [
    "ch3-s03-p008"
   ]
@@ -2026,7 +2026,7 @@
   "test": "british-citizenship-test-13",
   "chapter": null,
   "question_en": "In the UK, you have to be 21 years old to be able to vote in a general election.",
-  "question_zh": "在英国，你必须年满21岁才能在大选中投票。",
+  "question_zh": "在英国，您必须年满21岁才能在大选中投票。",
   "options": [
    {
     "en": "True",
@@ -3253,30 +3253,30 @@
   "test": "british-citizenship-test-15",
   "chapter": null,
   "question_en": "When was England ruled by a republic and not by a monarch?",
-  "question_zh": "以下哪项关于英国宪法的陈述是正确的？",
+  "question_zh": "英格兰何时由共和国统治而非君主制？",
   "options": [
    {
     "en": "When Elizabeth I died without any successor",
-    "zh": "英国有一部成文宪法"
+    "zh": "伊丽莎白一世去世且无继承人时"
    },
    {
     "en": "When Charles I was executed",
-    "zh": "英国宪法是不成文的"
+    "zh": "查理一世被处决时"
    },
    {
     "en": "When the Carta Magna restricted the king’s power",
-    "zh": "英国宪法于1689年制定"
+    "zh": "《大宪章》限制国王权力时"
    },
    {
     "en": "When kind Harold died after the Battle of Hastings",
-    "zh": "英国宪法于1215年制定"
+    "zh": "哈罗德国王在黑斯廷斯战役阵亡时"
    }
   ],
   "answer": [
    1
   ],
   "explanation_en": "When Charles I was executed , England declared itself a republic, called the Commonwealth. It no longer had a monarch.",
-  "explanation_zh": "英国宪法没有记录在任何单一文件中，因此被称为“不成文”宪法。",
+  "explanation_zh": "当查理一世被处决时，英格兰宣布自己为共和国，称为英吉利共和国（Commonwealth）。当时不再有君主。",
   "linked_content": [
    "ch3-s06-p031"
   ]
@@ -3287,30 +3287,30 @@
   "test": "british-citizenship-test-15",
   "chapter": null,
   "question_en": "Which film produced in the UK was one of the most commercially successful films of all time and one of the highest-grossing film franchises?",
-  "question_zh": "以下哪项关于英国国家彩票的陈述是正确的？",
+  "question_zh": "哪部在英国制作的电影是有史以来商业最成功的电影之一，也是票房最高的电影系列之一？",
   "options": [
    {
     "en": "Harry Potter",
-    "zh": "每天开奖"
+    "zh": "《哈利·波特》"
    },
    {
     "en": "Spider-man",
-    "zh": "每周开奖"
+    "zh": "《蜘蛛侠》"
    },
    {
     "en": "The Lord of the Rings",
-    "zh": "每月开奖"
+    "zh": "《指环王》"
    },
    {
     "en": "Indiana Jones",
-    "zh": "每年开奖"
+    "zh": "《夺宝奇兵》"
    }
   ],
   "answer": [
    0
   ],
   "explanation_en": "Some of the most commercially successful films of all time, including the two highest-grossing film franchises ( Harry Potter and James Bond), have been produced in the UK.",
-  "explanation_zh": "国家彩票每周开奖，可通过购买彩票或刮刮乐参与。",
+  "explanation_zh": "有史以来商业最成功的电影包括票房最高的两个电影系列（《哈利·波特》和《007》），它们都是在英国制作的。",
   "linked_content": [
    "ch4-s04-p039"
   ]
@@ -3321,30 +3321,30 @@
   "test": "british-citizenship-test-15",
   "chapter": null,
   "question_en": "When did the first farmers come to Britain?",
-  "question_zh": "哪项法案废除了英国帝国范围内的奴隶制？",
+  "question_zh": "第一批农民何时来到不列颠？",
   "options": [
    {
     "en": "10,000 years ago",
-    "zh": "人身保护法（Habeas Corpus Act）"
+    "zh": "一万年前"
    },
    {
     "en": "6,000 years ago",
-    "zh": "权利法案（Bill of Rights）"
+    "zh": "六千年前"
    },
    {
     "en": "15,000 years ago",
-    "zh": "废奴法案（Emancipation Act）"
+    "zh": "一万五千年前"
    },
    {
     "en": "2,000 years ago",
-    "zh": "大宪章（Magna Carta）"
+    "zh": "两千年前"
    }
   ],
   "answer": [
    1
   ],
   "explanation_en": "The first farmers arrived in Britain 6,000 years ago .",
-  "explanation_zh": "1833年废奴法案（Emancipation Act）废除了整个大英帝国的奴隶制。",
+  "explanation_zh": "第一批农民于六千年前抵达不列颠。",
   "linked_content": [
    "ch6-s02-p003"
   ]
@@ -3355,30 +3355,30 @@
   "test": "british-citizenship-test-15",
   "chapter": null,
   "question_en": "When did the First World War end?",
-  "question_zh": "以下哪位是苏格兰诗人，以“老朋友难忘”（Auld Lang Syne）著称？",
+  "question_zh": "第一次世界大战何时结束？",
   "options": [
    {
     "en": "At 12.00 pm on 11th November 1914",
-    "zh": "迪伦·托马斯（Dylan Thomas）"
+    "zh": "1914年11月11日中午12点"
    },
    {
     "en": "At 12.00 pm on 11th November 1918",
-    "zh": "罗伯特·彭斯（Robert Burns）"
+    "zh": "1918年11月11日中午12点"
    },
    {
     "en": "At 11.00 am on 11th November 1914",
-    "zh": "威廉·莎士比亚（William Shakespeare）"
+    "zh": "1914年11月11日上午11点"
    },
    {
     "en": "At 11.00 am on 11th November 1918",
-    "zh": "鲁德亚德·吉卜林（Rudyard Kipling）"
+    "zh": "1918年11月11日上午11点"
    }
   ],
   "answer": [
    3
   ],
   "explanation_en": "The First World War ended at 11.00 am on 11th November 1918 with victory for Britain and its allies.",
-  "explanation_zh": "罗伯特·彭斯（Robert Burns）是苏格兰诗人，被称为“吟游诗人”，创作了《老朋友难忘》。",
+  "explanation_zh": "第一次世界大战于1918年11月11日上午11点结束，英国及其盟国获胜。",
   "linked_content": [
    "ch6-s02-p011"
   ]
@@ -3415,30 +3415,30 @@
   "test": "british-citizenship-test-15",
   "chapter": null,
   "question_en": "What medal did Mary Peters win in the 1972 Olympics?",
-  "question_zh": "以下哪项是英国民主的特点？",
+  "question_zh": "玛丽·彼得斯在1972年奥运会上获得了什么奖牌？",
   "options": [
    {
     "en": "She did not win any medals",
-    "zh": "选民直接选出法律"
+    "zh": "她没有获得任何奖牌"
    },
    {
     "en": "Silver",
-    "zh": "选民在大选中选出代表他们的下议院议员"
+    "zh": "银牌"
    },
    {
     "en": "Gold",
-    "zh": "所有公民必须在议会中任职"
+    "zh": "金牌"
    },
    {
     "en": "Bronze",
-    "zh": "首相由直接投票选出"
+    "zh": "铜牌"
    }
   ],
   "answer": [
    2
   ],
   "explanation_en": "Born in Manchester, Mary Peters moved to Northern Ireland as a child. She was a talented athlete who won an Olympic gold medal in the pentathlon in 1972.",
-  "explanation_zh": "在英国，每个选区的选民在大选中选出代表该选区的下议院议员（MP）。",
+  "explanation_zh": "玛丽·彼得斯出生于曼彻斯特，童年时移居北爱尔兰。她是一位才华横溢的运动员，在1972年奥运会上获得了五项全能金牌。",
   "linked_content": [
    "ch3-s02-p035"
   ]
@@ -4961,7 +4961,7 @@
   "test": "british-citizenship-test-3",
   "chapter": null,
   "question_en": "If you think someone is trying to persuade you to join an extremist or terrorist activity, who should you contact?",
-  "question_zh": "如果你认为有人正试图说服你加入极端主义或恐怖主义 activity，谁应该联系？",
+  "question_zh": "如果您认为有人正试图说服您加入极端主义或恐怖主义活动，您应该联系谁？",
   "options": [
    {
     "en": "The Home Office",
@@ -6542,7 +6542,7 @@
   "test": "british-citizenship-test-5",
   "chapter": null,
   "question_en": "What sort of church is the Church of Scotland?",
-  "question_zh": "苏格兰长老会（the Church of Scotland）是什么类型的教会？",
+  "question_zh": "苏格兰教会（the Church of Scotland）是什么类型的教会？",
   "options": [
    {
     "en": "Catholic",
@@ -8061,30 +8061,30 @@
   "test": "british-citizenship-test-7",
   "chapter": null,
   "question_en": "What was the biggest source of employment during the 18th century?",
-  "question_zh": "以下哪两部是著名的英国电影？",
+  "question_zh": "18世纪最大的就业来源是什么？",
   "options": [
    {
     "en": "Fishing",
-    "zh": "《通往皮姆利科的护照》（Passport to Pimlico）"
+    "zh": "渔业"
    },
    {
     "en": "Teaching",
-    "zh": "《美女与野兽》（Beauty and the Beast）"
+    "zh": "教学"
    },
    {
     "en": "Aircraft industry",
-    "zh": "《相见恨晚》（Brief Encounter）"
+    "zh": "航空工业"
    },
    {
     "en": "Manufacturing",
-    "zh": "《卡萨布兰卡》（Casablanca）"
+    "zh": "制造业"
    }
   ],
   "answer": [
    3
   ],
   "explanation_en": "During the 18th century, manufacturing jobs became the main source of employment in Britain.",
-  "explanation_zh": "《通往皮姆利科的护照》（Passport to Pimlico）和《相见恨晚》（Brief Encounter）是正确答案。",
+  "explanation_zh": "在18世纪，制造业工作成为英国主要的就业来源。",
   "linked_content": [
    "ch4-s04-p014",
    "ch4-s04-p019"
@@ -8414,30 +8414,30 @@
   "test": "british-citizenship-test-7",
   "chapter": null,
   "question_en": "What was the name of the activist group who fought for the women‘s right to vote?",
-  "question_zh": "申请国民保险号码（National Insurance Number）需要做什么？",
+  "question_zh": "争取妇女投票权的激进组织叫什么名字？",
   "options": [
    {
     "en": "Chartists",
-    "zh": "联系国民医疗服务体系（NHS）"
+    "zh": "宪章派"
    },
    {
     "en": "Beefeaters",
-    "zh": "联系就业与养老金部（DWP）"
+    "zh": "御用侍卫（Beefeaters）"
    },
    {
     "en": "Suffragettes",
-    "zh": "联系你当地的下议院议员（MP）"
+    "zh": "妇女社会政治联盟成员（Suffragettes）"
    },
    {
     "en": "Quakers",
-    "zh": "让你的雇主帮你办理"
+    "zh": "贵格会教徒"
    }
   ],
   "answer": [
    2
   ],
   "explanation_en": "In the late 19th and early 20th centuries, an increasing number of women campaigned and demonstrated for greater rights and, in particular, the right to vote. They formed the women’s suffrage movement and became known as the ‘suffragettes’ .",
-  "explanation_zh": "如果你有在英国工作的许可，你需要致电就业与养老金部（DWP）以安排获取国民保险号码。",
+  "explanation_zh": "在19世纪末和20世纪初，越来越多的女性为争取更多权利、特别是投票权而进行宣传和示威。她们组成了妇女参政运动，被称为“妇女社会政治联盟成员”（suffragettes）。",
   "linked_content": [
    "ch3-s03-p045"
   ]
@@ -8448,30 +8448,30 @@
   "test": "british-citizenship-test-7",
   "chapter": null,
   "question_en": "What UK landmark was voted as Britain’s favourite view in 2007?",
-  "question_zh": "以下哪项是英格兰的主要赛马赛事？",
+  "question_zh": "2007年，哪个英国地标被投票选为英国人最喜欢的景色？",
   "options": [
    {
     "en": "The Big Ben",
-    "zh": "温布尔登网球锦标赛（The Wimbledon Championship）"
+    "zh": "大本钟"
    },
    {
     "en": "Lake District",
-    "zh": "皇家阿斯科特赛马会（Royal Ascot）"
+    "zh": "湖区"
    },
    {
     "en": "Snowdonia",
-    "zh": "英国高尔夫球公开赛（The Open Championship）"
+    "zh": "斯诺登尼亚"
    },
    {
     "en": "The London Eye",
-    "zh": "六国锦标赛（The Six Nations Championship）"
+    "zh": "伦敦眼"
    }
   ],
   "answer": [
    1
   ],
   "explanation_en": "In 2007, television viewers voted Wastwater (Lake District) as Britain’s favourite view.",
-  "explanation_zh": "著名的赛马活动包括：皇家阿斯科特赛马会（Royal Ascot），这是在伯克郡举行、为期五天的赛马会，王室成员也会出席；利物浦附近的艾因特里举行的国家越野障碍追逐赛；以及艾尔举行的苏格兰国家越野障碍追逐赛。",
+  "explanation_zh": "2007年，电视观众将瓦斯特沃特湖（Wastwater，位于湖区）投票选为英国人最喜欢的景色。",
   "linked_content": [
    "ch4-s07-p027"
   ]
@@ -9105,7 +9105,7 @@
   "test": "british-citizenship-test-8",
   "chapter": null,
   "question_en": "A responsibility of the MPs is to represent everyone in their _______.",
-  "question_zh": "下议院议员（MP）的一项职责是代表他们选区中的所有人。",
+  "question_zh": "下议院议员（MP）的一项职责是代表其_______中的所有人。",
   "options": [
    {
     "en": "County",
@@ -9336,7 +9336,7 @@
   "test": "british-citizenship-test-8",
   "chapter": null,
   "question_en": "How often are the members of the Welsh government elected?",
-  "question_zh": "威尔士议会（Welsh government）议员多久选举一次？",
+  "question_zh": "威尔士政府（Welsh government）成员多久选举一次？",
   "options": [
    {
     "en": "Every 5 years",
@@ -11360,7 +11360,7 @@
   "test": "british-naturalization-test-10",
   "chapter": null,
   "question_en": "How many members does the Welsh government have?",
-  "question_zh": "威尔士议会（Senedd）有多少名议员？",
+  "question_zh": "威尔士政府（Welsh government）有多少名成员？",
   "options": [
    {
     "en": "150",
@@ -12854,7 +12854,7 @@
   "test": "life-in-the-uk-exam-16",
   "chapter": null,
   "question_en": "Who came from the Netherlands to become the British monarch?",
-  "question_zh": "谁从荷兰回来成为英国君主？",
+  "question_zh": "谁从荷兰来到英国成为君主？",
   "options": [
    {
     "en": "William II",

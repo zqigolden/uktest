@@ -75,13 +75,34 @@ def group_lines(words):
     return lines
 
 
-def build_lines(words, img_bottoms):
-    """Filtered, classified lines: dicts with top/x0/kind/text/words."""
+def build_lines(words, img_boxes):
+    """Filtered, classified lines: dicts with top/x0/kind/text/words.
+
+    Caption filtering is per-word: a word is caption text only if it sits just
+    below an image AND horizontally overlaps it — on two-column pages, body
+    text in one column can share the y-band below an image in the other.
+    """
     out = []
-    for ln in group_lines(words):
-        top = ln[0]["top"]
-        if any(-2 <= top - b <= CAPTION_BELOW_IMAGE for b in img_bottoms):
+    for raw_ln in group_lines(words):
+        top = raw_ln[0]["top"]
+        gone, ln = [], []
+        for w in raw_ln:
+            is_caption = any(
+                -2 <= top - b <= CAPTION_BELOW_IMAGE and w["x0"] < x1 and w["x1"] > x0
+                for (x0, x1, b) in img_boxes
+            )
+            (gone if is_caption else ln).append(w)
+        if not ln:
             continue  # image caption / alt text
+        if gone:
+            # keep the remainder only if a column gap separates it from the
+            # caption words; otherwise it is the caption running past the image
+            sep = max(
+                min(w["x0"] for w in ln) - max(w["x1"] for w in gone),
+                min(w["x0"] for w in gone) - max(w["x1"] for w in ln),
+            )
+            if sep < 30:
+                continue
         size = max(x["size"] for x in ln)
         font = max(ln, key=lambda x: x["size"])["fontname"]
         text = " ".join(x["text"] for x in ln).strip()
@@ -394,8 +415,8 @@ def main():
                 for w in page.extract_words(extra_attrs=["size", "fontname"])
                 if HEADER_TOP <= w["top"] <= FOOTER_TOP
             ]
-            img_bottoms = [img["bottom"] for img in page.images]
-            lines = build_lines(words, img_bottoms)
+            img_boxes = [(img["x0"], img["x1"], img["bottom"]) for img in page.images]
+            lines = build_lines(words, img_boxes)
             gx = find_gutter(lines) if len(lines) >= 12 else None
             if gx is None:
                 b.process(lines, flow_break_first=True)
@@ -407,9 +428,9 @@ def main():
                     b.process(band[1], flow_break_first=True)
                 else:
                     _, left_words, right_words = band
-                    b.process(build_lines(left_words, img_bottoms), flow_break_first=True)
+                    b.process(build_lines(left_words, img_boxes), flow_break_first=True)
                     b.flush()
-                    b.process(build_lines(right_words, img_bottoms), flow_break_first=True)
+                    b.process(build_lines(right_words, img_boxes), flow_break_first=True)
     b.flush()
 
     # Re-extraction must not wipe enrichment (zh / en_simple / exam notes):

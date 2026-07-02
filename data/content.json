@@ -553,7 +553,7 @@
   "subheading": "Check that you understand:",
   "type": "list",
   "en": "• The different countries that make up the UK",
-  "zh": "• 组成联合王国（UK）的不同国家",
+  "zh": "• 组成联合王国（英国）的不同国家",
   "en_simple": null,
   "is_exam_point": false,
   "exam_note_zh": null
@@ -8729,6 +8729,19 @@
   "heading": "5.6.1 Who can vote?",
   "subheading": "Northern Ireland Assembly",
   "type": "para",
+  "en": "In Northern Ireland elected members, known as MLAs, meet in the Northern Ireland Assembly at Stormont, in Belfast.",
+  "zh": "在北爱尔兰，当选成员（称为MLA）在贝尔法斯特的斯托蒙特北爱尔兰议会开会。",
+  "en_simple": null,
+  "is_exam_point": false,
+  "exam_note_zh": null
+ },
+ {
+  "id": "ch5-s06-p056",
+  "chapter": 5,
+  "section": "5.6.1",
+  "heading": "5.6.1 Who can vote?",
+  "subheading": "Northern Ireland Assembly",
+  "type": "para",
   "en": "There are two ways to arrange a visit to Stormont. You can either contact the Education Service (details are on the Northern Ireland Assembly website at www.niassembly.gov.uk) or contact an MLA.",
   "zh": "安排参观 Stormont（北爱尔兰议会大厦）有两种方式。您可以联系教育服务部门（详细信息见北爱尔兰议会网站 www.niassembly.gov.uk），或者直接联系一名北爱尔兰议会议员（MLA）。",
   "en_simple": null,
@@ -8736,7 +8749,7 @@
   "exam_note_zh": null
  },
  {
-  "id": "ch5-s06-p056",
+  "id": "ch5-s06-p057",
   "chapter": 5,
   "section": "5.6.1",
   "heading": "5.6.1 Who can vote?",
@@ -8749,7 +8762,7 @@
   "exam_note_zh": null
  },
  {
-  "id": "ch5-s06-p057",
+  "id": "ch5-s06-p058",
   "chapter": 5,
   "section": "5.6.1",
   "heading": "5.6.1 Who can vote?",
@@ -8762,7 +8775,7 @@
   "exam_note_zh": null
  },
  {
-  "id": "ch5-s06-p058",
+  "id": "ch5-s06-p059",
   "chapter": 5,
   "section": "5.6.1",
   "heading": "5.6.1 Who can vote?",
@@ -8775,7 +8788,7 @@
   "exam_note_zh": null
  },
  {
-  "id": "ch5-s06-p059",
+  "id": "ch5-s06-p060",
   "chapter": 5,
   "section": "5.6.1",
   "heading": "5.6.1 Who can vote?",
@@ -8788,7 +8801,7 @@
   "exam_note_zh": null
  },
  {
-  "id": "ch5-s06-p060",
+  "id": "ch5-s06-p061",
   "chapter": 5,
   "section": "5.6.1",
   "heading": "5.6.1 Who can vote?",

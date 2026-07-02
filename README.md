@@ -13,15 +13,15 @@ Mobile-first web app for preparing the [Life in the UK Test](https://www.gov.uk/
 
 ## Status
 
-**Done**: data pipeline, full app, CI/CD to GitHub Pages. **Handbook translation complete (752/752 units)**; all **17 mock exams fully translated and linked to the handbook** (408 questions).
-**Pending / deferred**: chapter & general test translations (deferred — mock exams are the primary practice content), simplified-English layer (3/752). The app degrades to English wherever Chinese is missing. See [Roadmap](#roadmap) and the status table in [AI_TASKS.md](AI_TASKS.md).
+**Done**: data pipeline, full app, CI/CD to GitHub Pages. **Handbook translation complete (753/753 units)**; all **17 mock exams fully translated and linked to the handbook** (408 questions).
+**Pending / deferred**: chapter & general test translations (deferred — mock exams are the primary practice content), simplified-English layer (3/753). The app degrades to English wherever Chinese is missing. See [Roadmap](#roadmap) and the status table in [AI_TASKS.md](AI_TASKS.md).
 
 ## Architecture
 
 Two halves, connected only through committed JSON files. No backend — deployable anywhere static.
 
 ```
-document.pdf ──▶ scripts/extract_pdf.py ──▶ data/content.json   (752 units)
+document.pdf ──▶ scripts/extract_pdf.py ──▶ data/content.json   (753 units)
 site HTML   ──▶ scripts/scrape_questions.py ──▶ data/questions.json (2160)
 (cached in data/raw/*.html.gz)              └─▶ data/tests.json  (90 sets)
                                                     │
@@ -93,7 +93,7 @@ Python scripts need `pdfplumber`, `requests`, `beautifulsoup4` (validate.py is s
 
 ## Roadmap
 
-1. **Finish content enrichment** (per [AI_TASKS.md](AI_TASKS.md) §Gemini, which has the authoritative status table): retranslate the 110 content units invalidated by the extraction fix (mostly sections 5.4–5.8), then question translations for chapter tests (792) and general tests (960), then G4 links for those, then G3 simplified-English rewrites (3/752 done). Terminology must follow [data/glossary.md](data/glossary.md); merge batches only through `validate.py`.
+1. **Finish content enrichment** (per [AI_TASKS.md](AI_TASKS.md) §Gemini, which has the authoritative status table): retranslate the 110 content units invalidated by the extraction fix (mostly sections 5.4–5.8), then question translations for chapter tests (792) and general tests (960), then G4 links for those, then G3 simplified-English rewrites (3/753 done). Terminology must follow [data/glossary.md](data/glossary.md); merge batches only through `validate.py`.
 2. **F7 review queue** — spot-check merged batches, resolve `"ESCALATE"` markers. Done so far: fixed chapter-5 column interleaving (2026-07-02), remapped all question links after re-extraction, corrected 31 mislinked questions.
 3. **Ideas, unscheduled** — link exam-point highlights to their questions in the reading view (needs G4 complete); per-question stats on the mistake book; PWA manifest for offline/home-screen use; timed exam mode (45 min, like the real test).
 

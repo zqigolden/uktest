@@ -37,7 +37,7 @@ Phases 2 and 3 can run in parallel once schemas are frozen.
 
 All enrichment work operates on these two files. Fields owned by Fable 5 extraction are read-only for every other model.
 
-### `data/content.json` — handbook content units (704 units, GENERATED — schema is live)
+### `data/content.json` — handbook content units (753 units, GENERATED — schema is live)
 
 ```json
 {
@@ -93,8 +93,8 @@ Enrichment progress after the first Gemini pass (2026-07-01/02):
 
 | Field | Coverage | Notes |
 |---|---|---|
-| content `zh` | **752/752 ✓** | 110 re-fixed units translated by the local LM Studio model (2026-07-02), Fable-reviewed |
-| content `en_simple` | 3/752 | G3 essentially not started |
+| content `zh` | **753/753 ✓** | includes 110 re-fixed units + final-audit restorations, local-model translated, Fable-reviewed |
+| content `en_simple` | 3/753 | G3 essentially not started |
 | questions `question_zh` + options + explanations | 408/2160 | all 17 mock exams done; chapter/general test translation **deferred by user decision** (2026-07-02) — exams are the primary practice content |
 | questions `linked_content` | 408 | exam questions only |
 | `is_exam_point` | 15 | 14 seeded from ch6 + 1 from G4 |
@@ -119,9 +119,24 @@ re-extraction: (1) check the "translated units dropped" count it prints,
 target text changed. validate.py only proves link ids exist, not that they
 point at the right unit.
 
-**Next Gemini batches, in order**: (a) retranslate the 110 null-`zh` content
-units (sections 5.4–5.8 mostly), (b) G2 chapter-test questions, (c) G2 general
-questions, (d) G4 links for newly translated questions, (e) G3 simplification.
+**F7 final audit (2026-07-02, PDF content + exam questions)**: deterministic
+sweep (PDF↔JSON word coverage per page, TOC section coverage, digit/year
+preservation in zh, exam answers re-checked against cached raw HTML) plus a
+local-LLM alignment pass over all 408 exam question translations. Found and
+fixed: caption filter had eaten two body lines under images on two-column
+p89 (filter is now per-word with horizontal-overlap + same-run rule);
+8 exam questions carried translations of *different* questions (batch mix-up
+in the first pass); 4 questions still held `TRANSLATION_FAILED` placeholders;
+7 minor zh defects (two answer-giveaways — a filled-in blank and 苏格兰长老会
+in a "what type of church" question — an untranslated word, Welsh
+government/议会 confusion ×2, one ambiguity, one register slip). All exam
+answers match the source site; all digit "losses" were legitimate Chinese
+numeral conversions (4亿, 一万, 6760万, 18世纪末). Post-fix re-check: 19/19
+aligned, 408/408 fully translated.
+
+**Next Gemini batches, in order** (all currently deferred): (a) G2
+chapter-test questions, (b) G2 general questions, (c) G4 links for newly
+translated questions, (d) G3 simplification.
 
 Tasks, in order:
 
