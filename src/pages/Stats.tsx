@@ -2,12 +2,14 @@ import { useRef } from "react";
 import { CHAPTERS } from "../types";
 import { loadTests } from "../data";
 import { allAttempts, allSessions, readSectionKeys, exportData, importData } from "../db";
-import { useAsync } from "../hooks";
+import { useAsync, useSetting } from "../hooks";
 
 const DAY_MS = 86_400_000;
 
 export default function Stats() {
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [shuffleQuestions, setShuffleQuestions] = useSetting("shuffleQuestions", false);
+  const [shuffleOptions, setShuffleOptions] = useSetting("shuffleOptions", false);
 
   async function handleExport() {
     try {
@@ -178,6 +180,32 @@ export default function Stats() {
             </div>
           );
         })}
+      </div>
+
+      <div className="card">
+        <div style={{ fontWeight: 650, marginBottom: 12 }}>做题设置</div>
+        <div className="row" style={{ justifyContent: "space-between", marginBottom: 12 }}>
+          <span style={{ fontSize: 14, fontWeight: 500 }}>做题时随机打乱题目顺序</span>
+          <div className="seg" style={{ width: "120px" }}>
+            <button className={shuffleQuestions ? "on" : ""} onClick={() => setShuffleQuestions(true)}>
+              开启
+            </button>
+            <button className={!shuffleQuestions ? "on" : ""} onClick={() => setShuffleQuestions(false)}>
+              关闭
+            </button>
+          </div>
+        </div>
+        <div className="row" style={{ justifyContent: "space-between" }}>
+          <span style={{ fontSize: 14, fontWeight: 500 }}>做题时随机打乱选项顺序</span>
+          <div className="seg" style={{ width: "120px" }}>
+            <button className={shuffleOptions ? "on" : ""} onClick={() => setShuffleOptions(true)}>
+              开启
+            </button>
+            <button className={!shuffleOptions ? "on" : ""} onClick={() => setShuffleOptions(false)}>
+              关闭
+            </button>
+          </div>
+        </div>
       </div>
 
       <div className="card">

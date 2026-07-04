@@ -115,7 +115,7 @@ export async function exportData(): Promise<BackupData> {
     kv.push({ key, value });
   }
 
-  const localKeys = ["langMode", "simpleEnglish", "quizLangMode"];
+  const localKeys = ["langMode", "simpleEnglish", "quizLangMode", "shuffleQuestions", "shuffleOptions"];
   const ls: Record<string, string> = {};
   for (const k of localKeys) {
     const val = localStorage.getItem(k);

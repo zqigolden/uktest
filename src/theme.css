@@ -142,6 +142,7 @@ button {
 /* ---------- building blocks ---------- */
 
 .card {
+  display: block;
   background: var(--card);
   border-radius: var(--radius);
   padding: 14px 16px;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import type { Question } from "../types";
 import { recordAttempt, recordSession } from "../db";
@@ -24,12 +24,34 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
   const [results, setResults] = useState<boolean[]>([]);
   const [done, setDone] = useState(false);
   const [mode, setMode] = useSetting<"en" | "both">("quizLangMode", "both");
+  const [shuffleQuestions] = useSetting("shuffleQuestions", false);
+  const [shuffleOptions] = useSetting("shuffleOptions", false);
 
-  if (questions.length === 0) {
+  const shuffledQuestions = useMemo(() => {
+    if (!shuffleQuestions) return questions;
+    const arr = [...questions];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, [questions, shuffleQuestions]);
+
+  if (shuffledQuestions.length === 0) {
     return <div className="empty">没有可用的题目</div>;
   }
 
-  const q = questions[idx];
+  const q = shuffledQuestions[idx];
+
+  const shuffledOptions = useMemo(() => {
+    const arr = q.options.map((o, i) => ({ ...o, origIndex: i }));
+    if (!shuffleOptions) return arr;
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, [q, shuffleOptions]);
   const multi = q.answer.length > 1;
   const correctCount = results.filter(Boolean).length;
 
@@ -46,7 +68,8 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
 
   function submit(chosen: number[]) {
     if (submitted || chosen.length === 0) return;
-    const correct = same(chosen, q.answer);
+    const chosenOrig = chosen.map((i) => shuffledOptions[i].origIndex).sort((a, b) => a - b);
+    const correct = same(chosenOrig, q.answer);
     setPicked(chosen);
     setSubmitted(true);
     setResults((r) => [...r, correct]);
@@ -55,19 +78,19 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
       test: q.test,
       chapter: q.chapter,
       correct,
-      chosen,
+      chosen: chosenOrig,
       ts: Date.now(),
     });
   }
 
   function next() {
-    if (idx + 1 >= questions.length) {
+    if (idx + 1 >= shuffledQuestions.length) {
       if (sessionSlug) {
         void recordSession({
           test: sessionSlug,
           ts: Date.now(),
           score: correctCount,
-          total: questions.length,
+          total: shuffledQuestions.length,
         });
       }
       setDone(true);
@@ -79,14 +102,14 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
   }
 
   if (done) {
-    const pct = Math.round((correctCount / questions.length) * 100);
+    const pct = Math.round((correctCount / shuffledQuestions.length) * 100);
     const passed = pct >= 75; // real test pass mark
     return (
       <div>
         <div className="card result-hero">
           <div className="tiny">{title}</div>
           <div className="score" style={{ color: passed ? "var(--good)" : "var(--bad)" }}>
-            {correctCount}/{questions.length}
+            {correctCount}/{shuffledQuestions.length}
           </div>
           <div className="muted">
             正确率 {pct}%（真实考试通过线 75%）——{passed ? "通过 ✓" : "未通过"}
@@ -104,26 +127,15 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
 
   return (
     <div>
-      <div className="row" style={{ marginBottom: 12 }}>
-        <div className="seg grow">
-          <button className={mode === "both" ? "on" : ""} onClick={() => setMode("both")}>
-            中英对照
-          </button>
-          <button className={mode === "en" ? "on" : ""} onClick={() => setMode("en")}>
-            纯英文
-          </button>
-        </div>
-      </div>
-
       <div className="row" style={{ marginBottom: 8 }}>
         <div className="grow progress-track">
           <div
             className="progress-fill"
-            style={{ width: `${(idx / questions.length) * 100}%` }}
+            style={{ width: `${(idx / shuffledQuestions.length) * 100}%` }}
           />
         </div>
         <span className="tiny">
-          {idx + 1}/{questions.length}
+          {idx + 1}/{shuffledQuestions.length}
         </span>
       </div>
 
@@ -137,12 +149,12 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
         )}
       </div>
 
-      {q.options.map((o, i) => {
+      {shuffledOptions.map((o, i) => {
         const cls = ["option"];
         if (multi) cls.push("multi");
         if (!submitted && picked.includes(i)) cls.push("picked");
-        if (submitted && q.answer.includes(i)) cls.push("correct");
-        if (submitted && picked.includes(i) && !q.answer.includes(i)) cls.push("wrong");
+        if (submitted && q.answer.includes(o.origIndex)) cls.push("correct");
+        if (submitted && picked.includes(i) && !q.answer.includes(o.origIndex)) cls.push("wrong");
         return (
           <button key={i} className={cls.join(" ")} onClick={() => toggle(i)}>
             <span className="mark">{LETTERS[i]}</span>
@@ -154,31 +166,40 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
         );
       })}
 
-      {multi && !submitted && (
-        <button
-          className="btn"
-          disabled={picked.length === 0}
-          onClick={() => submit(picked)}
-        >
-          确认答案
-        </button>
+      {submitted && (q.explanation_en || (mode === "both" && q.explanation_zh)) && (
+        <div className="explanation">
+          {q.explanation_en && <div>{q.explanation_en}</div>}
+          {mode === "both" && q.explanation_zh && (
+            <div style={{ marginTop: 6, color: "var(--ink-2)" }}>{q.explanation_zh}</div>
+          )}
+        </div>
       )}
 
-      {submitted && (
-        <>
-          {(q.explanation_en || (mode === "both" && q.explanation_zh)) && (
-            <div className="explanation">
-              {q.explanation_en && <div>{q.explanation_en}</div>}
-              {mode === "both" && q.explanation_zh && (
-                <div style={{ marginTop: 6, color: "var(--ink-2)" }}>{q.explanation_zh}</div>
-              )}
-            </div>
-          )}
-          <button className="btn" onClick={next}>
-            {idx + 1 >= questions.length ? "查看成绩" : "下一题"}
+      <div className="row" style={{ marginTop: 16 }}>
+        <button
+          className="btn secondary"
+          style={{ width: "auto", flexShrink: 0, padding: "12px 16px", fontSize: "14px" }}
+          onClick={() => setMode(mode === "both" ? "en" : "both")}
+        >
+          {mode === "both" ? "🌐 纯英" : "🌐 双语"}
+        </button>
+
+        {multi && !submitted && (
+          <button
+            className="btn grow"
+            disabled={picked.length === 0}
+            onClick={() => submit(picked)}
+          >
+            确认答案
           </button>
-        </>
-      )}
+        )}
+
+        {submitted && (
+          <button className="btn grow" onClick={next}>
+            {idx + 1 >= shuffledQuestions.length ? "查看成绩" : "下一题"}
+          </button>
+        )}
+      </div>
     </div>
   );
 }

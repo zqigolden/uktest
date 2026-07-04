@@ -19,9 +19,9 @@ export default function Quiz() {
 
   return (
     <div>
-      <div className="topbar">
-        <button className="back" onClick={() => nav("/tests")}>‹</button>
-        <h1 style={{ fontSize: 16 }}>{d.meta?.title ?? slug}</h1>
+      <div className="topbar" style={{ padding: "4px 2px 8px" }}>
+        <button className="back" onClick={() => nav("/tests")} style={{ fontSize: 20, paddingRight: 6 }}>‹</button>
+        <h1 style={{ fontSize: 14, fontWeight: 600 }}>{d.meta?.title ?? slug}</h1>
       </div>
       <QuizRunner
         questions={d.questions}

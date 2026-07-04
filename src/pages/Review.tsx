@@ -16,10 +16,10 @@ export default function Review() {
 
   return (
     <div>
-      <div className="topbar">
-        <button className="back" onClick={() => nav(-1)}>‹</button>
-        <h1>错题本</h1>
-        <span className="chip bad">{d.length} 题</span>
+      <div className="topbar" style={{ padding: "4px 2px 8px" }}>
+        <button className="back" onClick={() => nav(-1)} style={{ fontSize: 20, paddingRight: 6 }}>‹</button>
+        <h1 style={{ fontSize: 14, fontWeight: 600 }}>错题本</h1>
+        <span className="chip bad" style={{ fontSize: 11, padding: "1px 6px" }}>{d.length} 题</span>
       </div>
       {d.length === 0 ? (
         <div className="empty">
