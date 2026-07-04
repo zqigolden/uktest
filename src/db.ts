@@ -91,3 +91,87 @@ export async function wrongQuestionIds(): Promise<string[]> {
   }
   return [...latest.values()].filter((a) => !a.correct).map((a) => a.qid);
 }
+
+export interface BackupData {
+  version: number;
+  ts: number;
+  localStorage: Record<string, string>;
+  indexedDb: {
+    attempts: Attempt[];
+    sessions: Session[];
+    kv: { key: string; value: unknown }[];
+  };
+}
+
+export async function exportData(): Promise<BackupData> {
+  const d = await db();
+  const attempts = await d.getAll("attempts");
+  const sessions = await d.getAll("sessions");
+
+  const kvKeys = await d.getAllKeys("kv");
+  const kv: { key: string; value: unknown }[] = [];
+  for (const key of kvKeys) {
+    const value = await d.get("kv", key);
+    kv.push({ key, value });
+  }
+
+  const localKeys = ["langMode", "simpleEnglish", "quizLangMode"];
+  const ls: Record<string, string> = {};
+  for (const k of localKeys) {
+    const val = localStorage.getItem(k);
+    if (val !== null) ls[k] = val;
+  }
+
+  return {
+    version: 1,
+    ts: Date.now(),
+    localStorage: ls,
+    indexedDb: {
+      attempts,
+      sessions,
+      kv,
+    },
+  };
+}
+
+export async function importData(backup: BackupData): Promise<void> {
+  if (backup.version !== 1) {
+    throw new Error("不支持的备份文件版本");
+  }
+
+  const d = await db();
+
+  // Clear existing data
+  await d.clear("attempts");
+  await d.clear("sessions");
+  await d.clear("kv");
+
+  // Restore attempts
+  if (backup.indexedDb.attempts) {
+    for (const a of backup.indexedDb.attempts) {
+      await d.add("attempts", a);
+    }
+  }
+
+  // Restore sessions
+  if (backup.indexedDb.sessions) {
+    for (const s of backup.indexedDb.sessions) {
+      await d.add("sessions", s);
+    }
+  }
+
+  // Restore kv
+  if (backup.indexedDb.kv) {
+    for (const item of backup.indexedDb.kv) {
+      await d.put("kv", item.value, item.key);
+    }
+  }
+
+  // Restore localStorage
+  if (backup.localStorage) {
+    for (const [k, v] of Object.entries(backup.localStorage)) {
+      localStorage.setItem(k, v);
+    }
+  }
+}
+

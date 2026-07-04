@@ -1,11 +1,60 @@
+import { useRef } from "react";
 import { CHAPTERS } from "../types";
 import { loadTests } from "../data";
-import { allAttempts, allSessions, readSectionKeys } from "../db";
+import { allAttempts, allSessions, readSectionKeys, exportData, importData } from "../db";
 import { useAsync } from "../hooks";
 
 const DAY_MS = 86_400_000;
 
 export default function Stats() {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  async function handleExport() {
+    try {
+      const data = await exportData();
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `uktest-backup-${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      alert("导出失败: " + String(err));
+    }
+  }
+
+  function handleImportClick() {
+    fileInputRef.current?.click();
+  }
+
+  async function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = async (event) => {
+      try {
+        const text = event.target?.result as string;
+        const data = JSON.parse(text);
+
+        if (!data || data.version !== 1 || !data.indexedDb) {
+          alert("无效的备份文件！");
+          return;
+        }
+
+        if (confirm("导入备份将覆盖当前的所有学习进度与设置，确定要继续吗？")) {
+          await importData(data);
+          alert("导入成功！应用即将刷新。");
+          window.location.reload();
+        }
+      } catch (err) {
+        alert("导入失败，文件解析错误: " + String(err));
+      }
+    };
+    reader.readAsText(file);
+  }
+
   const d = useAsync(async () => {
     const [attempts, sessions, readKeys, tests] = await Promise.all([
       allAttempts(),
@@ -129,6 +178,28 @@ export default function Stats() {
             </div>
           );
         })}
+      </div>
+
+      <div className="card">
+        <div style={{ fontWeight: 650, marginBottom: 10 }}>数据备份与恢复</div>
+        <div className="tiny" style={{ marginBottom: 12 }}>
+          导出您的学习进度与设置，或在其他设备/浏览器中导入以同步进度。
+        </div>
+        <div className="row">
+          <button className="btn secondary grow" onClick={handleExport}>
+            📤 导出备份
+          </button>
+          <button className="btn secondary grow" onClick={handleImportClick}>
+            📥 导入备份
+          </button>
+        </div>
+        <input
+          type="file"
+          ref={fileInputRef}
+          accept=".json"
+          onChange={handleFileChange}
+          style={{ display: "none" }}
+        />
       </div>
     </div>
   );

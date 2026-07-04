@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import type { Question } from "../types";
 import { recordAttempt, recordSession } from "../db";
+import { useSetting } from "../hooks";
 
 interface Props {
   questions: Question[];
@@ -22,6 +23,7 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
   const [submitted, setSubmitted] = useState(false);
   const [results, setResults] = useState<boolean[]>([]);
   const [done, setDone] = useState(false);
+  const [mode, setMode] = useSetting<"en" | "both">("quizLangMode", "both");
 
   if (questions.length === 0) {
     return <div className="empty">没有可用的题目</div>;
@@ -102,6 +104,17 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
 
   return (
     <div>
+      <div className="row" style={{ marginBottom: 12 }}>
+        <div className="seg grow">
+          <button className={mode === "both" ? "on" : ""} onClick={() => setMode("both")}>
+            中英对照
+          </button>
+          <button className={mode === "en" ? "on" : ""} onClick={() => setMode("en")}>
+            纯英文
+          </button>
+        </div>
+      </div>
+
       <div className="row" style={{ marginBottom: 8 }}>
         <div className="grow progress-track">
           <div
@@ -117,7 +130,11 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
       <div className="card">
         {multi && <span className="chip">多选题 · 选 {q.answer.length} 项</span>}
         <p style={{ fontWeight: 600, marginBottom: 4 }}>{q.question_en}</p>
-        {q.question_zh && <p className="muted" style={{ marginTop: 0 }}>{q.question_zh}</p>}
+        {mode === "both" && q.question_zh && (
+          <p className="muted" style={{ marginTop: 0 }}>
+            {q.question_zh}
+          </p>
+        )}
       </div>
 
       {q.options.map((o, i) => {
@@ -131,7 +148,7 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
             <span className="mark">{LETTERS[i]}</span>
             <span className="grow">
               {o.en}
-              {o.zh && <span className="t-zh">{o.zh}</span>}
+              {mode === "both" && o.zh && <span className="t-zh">{o.zh}</span>}
             </span>
           </button>
         );
@@ -149,10 +166,10 @@ export default function QuizRunner({ questions, title, sessionSlug }: Props) {
 
       {submitted && (
         <>
-          {(q.explanation_en || q.explanation_zh) && (
+          {(q.explanation_en || (mode === "both" && q.explanation_zh)) && (
             <div className="explanation">
               {q.explanation_en && <div>{q.explanation_en}</div>}
-              {q.explanation_zh && (
+              {mode === "both" && q.explanation_zh && (
                 <div style={{ marginTop: 6, color: "var(--ink-2)" }}>{q.explanation_zh}</div>
               )}
             </div>
