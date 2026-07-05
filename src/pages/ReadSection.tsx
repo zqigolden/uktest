@@ -46,6 +46,29 @@ function Unit({ u, mode, simple }: { u: ContentUnit; mode: LangMode; simple: boo
         <span className="exam-note">★ 考点{u.exam_note_zh ? ` · ${u.exam_note_zh}` : ""}</span>
       )}
       {body}
+      {u.page && (
+        <div style={{ marginTop: 4, display: "flex", justifyContent: "flex-end" }}>
+          <a
+            href={`./document.pdf#page=${u.page}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 3,
+              color: "var(--ink-3)",
+              fontSize: "11px",
+              textDecoration: "none",
+              background: "var(--line)",
+              padding: "2px 6px",
+              borderRadius: "4px",
+              fontWeight: 500,
+            }}
+          >
+            📄 PDF p. {u.page}
+          </a>
+        </div>
+      )}
     </div>
   );
 }

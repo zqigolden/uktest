@@ -10,6 +10,7 @@ export interface ContentUnit {
   en_simple: string | null;
   is_exam_point: boolean;
   exam_note_zh: string | null;
+  page?: number;
 }
 
 export interface QuestionOption {

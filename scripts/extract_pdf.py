@@ -252,6 +252,7 @@ class Builder:
         self.buf = []  # pending paragraph lines
         self.buf_type = "para"  # para | list
         self.tables = 0
+        self.pageno = 1
 
     def sec_slug(self) -> str:
         # "5.4.1" -> "s04" (minor of the owning h2 section), "1.2" -> "s02"
@@ -277,6 +278,7 @@ class Builder:
                 "en_simple": None,
                 "is_exam_point": self.chapter == 6,
                 "exam_note_zh": None,
+                "page": self.pageno,
             }
         )
 
@@ -410,6 +412,7 @@ def main():
         for pageno, page in enumerate(pdf.pages, start=1):
             if pageno <= 3:
                 continue
+            b.pageno = pageno
             words = [
                 w
                 for w in page.extract_words(extra_attrs=["size", "fontname"])
