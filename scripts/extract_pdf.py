@@ -27,7 +27,7 @@ from pathlib import Path
 import pdfplumber
 
 ROOT = Path(__file__).resolve().parent.parent
-PDF = ROOT / "document.pdf"
+PDF = ROOT / "public" / "document.pdf"
 OUT = ROOT / "data" / "content.json"
 
 HEADER_TOP = 45
